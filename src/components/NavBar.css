@@ -87,6 +87,17 @@ body{
     .menu-icon {
       display: block; /* Mostrar o ícone do menu em telas menores */
     }
+    .boxCar{
+      display: flex;
+      align-items: center;
+    }
+    .boxCar img{
+      width: 45px;
+      padding-right: 15px;
+    }
+    .boxCar img:hover{
+      transform: scale(1.05);
+    }
     .nav-links,
     .social-links {
       display: none; /* Ocultar links de navegação inicialmente em telas menores */
