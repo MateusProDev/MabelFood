@@ -37,7 +37,7 @@ const MaisVendidos = ({ addToCart }) => {
     <div>
       <div className="seeHome">
         <h1>Os mais vendidos</h1>
-        <h3>Ver Todos</h3>
+        <h4>Ver Todos</h4>
       </div>
       <div className="container"> {/* Adiciona a classe container aqui */}
         {products.map((product) => (

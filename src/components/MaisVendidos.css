@@ -7,16 +7,17 @@
 .seeHome{
   display: flex;
   justify-content: space-between;
-  padding: 15px 10px 0 10px;
+  padding: 15px 10px  10px;
+  margin-bottom: -45px;
 }
 .produto {
   display: block; /* Torna os itens em blocos inline */
-  width: 170px; /* Define a largura fixa de cada item */
+  width: 200px; /* Define a largura fixa de cada item */
   margin-right: 20px; /* Adiciona um espaçamento entre os itens */
 }
 
 .produto img {
-  width: 100%;
+  width: 200px;
   height: 100px;
   object-fit: cover; /* Para garantir que a imagem mantenha sua proporção */
   margin-right: 20px;
@@ -63,7 +64,7 @@ h2 {
   color: #333;
 }
 
-h3 {
+h4 {
   font-size: 16px;
   padding-top: 5px;
   color: #8c0000c0;
