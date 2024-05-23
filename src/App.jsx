@@ -25,7 +25,7 @@ const Avaliações = () => <div>
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className='mainConteudo'>
         {/* Barra de navegação */}
         <NavBar />
         {/* Categorias */}
