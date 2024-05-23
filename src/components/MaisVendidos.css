@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  overflow-x: auto; /* Habilita a rolagem horizontal */
+  white-space: nowrap; /* Evita que os itens quebrem para a próxima linha */
+  margin: 10px;
+}
+.seeHome{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px 0 10px;
+}
+.produto {
+  display: block; /* Torna os itens em blocos inline */
+  width: 170px; /* Define a largura fixa de cada item */
+  margin-right: 20px; /* Adiciona um espaçamento entre os itens */
+}
+
+.produto img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover; /* Para garantir que a imagem mantenha sua proporção */
+  margin-right: 20px;
+}
+
+.produto .box-value {
+  display: flex;
+  flex-direction: column;
+}
+
+.produto button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #F29D38;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.produto button:hover {
+  background-color: #8c0000;
+}
+
+.produto strong {
+  font-weight: bold;
+  color: #333;
+  font-size: 12px;
+  
+}
+
+.produto span {
+  color: #666;
+}
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+h3 {
+  font-size: 16px;
+  padding-top: 5px;
+  color: #8c0000c0;
+  text-decoration: underline !important;
+}

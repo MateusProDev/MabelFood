@@ -1,25 +1,25 @@
 /* ... (seus estilos existentes) */
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    background-color: #bdc3ff;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #bdc3ff;
 }
-.logo-container img{
-    width: 150px;
+.logo-container img {
+  width: 150px;
 }
-.logo-container img:hover{
+.logo-container img:hover {
   transform: scale(1.05);
 }
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f9f9f9;
-    color: #fff;
-    box-shadow: 4px 0 4px #333333b8;
-    padding: 5px 15px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  color: #fff;
+  box-shadow: 4px 0 4px #333333b8;
+  padding: 5px 15px;
 }
 .nav-links {
   display: flex;
@@ -39,7 +39,7 @@ body{
 .navbar li a {
   text-decoration: none;
   font-size: 20px; /* Tamanho original */
-  color: #F29D38;
+  color: #f29d38;
   display: flex;
   text-align: center;
   align-items: center; /* Centralizar verticalmente o texto */
@@ -51,123 +51,167 @@ body{
   color: #8c0000;
 }
 
-
-.nav-links-mobile{
-    display: none;
+.nav-links-mobile {
+  display: none;
 }
-.social-links{
-    display: flex;
+.social-links {
+  display: flex;
 }
-.social-links-icon{
-    display: flex;
-    padding: 0;
-    width: 150px;
+.social-links-icon {
+  display: flex;
+  padding: 0;
+  width: 150px;
 }
 
-
-.van-links ul{
-    display: flex;
+.van-links ul {
+  display: flex;
 }
 .menu-icon {
-    display: none; /* Inicialmente esconda o ícone do menu em telas maiores */
-    cursor: pointer;
-  }
-  
-  .menu-line {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #F29D38;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-  
-  /* Estilos responsivos */
-  @media (max-width: 768px) {
-    .menu-icon {
-      display: block; /* Mostrar o ícone do menu em telas menores */
-    }
-    .boxCar{
-      display: flex;
-      align-items: center;
-    }
-    .boxCar img{
-      width: 45px;
-      padding-right: 15px;
-    }
-    .boxCar img:hover{
-      transform: scale(1.05);
-    }
-    .nav-links,
-    .social-links {
-      display: none; /* Ocultar links de navegação inicialmente em telas menores */
-      flex-direction: column;
-      /* Adiciona uma transição suave para a propriedade opacity */
-      opacity: 0;
-      transition: opacity 1s ease-out;
-      position: absolute;
-      top: 86px; /* Ajuste conforme necessário */
-      left: 0;
-      width: 100%;
-      height: 50vh;
-      background-color: #f9f9f9;
-      padding: 10px;
-      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-      z-index: 1;
-    }
-    .nav-links{
-        display: none;
-    }
-    .navbar li {
-      display: flex;
-    }
-    .navbar li a {
-      text-align: left;
-      width: 50px;
-    }
-    .nav-links-mobile{
-        display: block;
-        margin: 20px 0 0 -70px;
-        text-align: center;
-    }
-    .nav-links-mobile li{
-        width: 150px;
-        height: 10px;
-        font-size: 22px;
-        font-family: Helvetica, sans-serif;
-        padding: 20px 5px;
-        text-align: left;
-    }
+  display: none; /* Inicialmente esconda o ícone do menu em telas maiores */
+  cursor: pointer;
+}
 
-    .nav-links-mobile li a{
-        text-decoration: none;
-        color: #F29D38;
-        text-align: left;
-    }
-    .nav-links-mobile li a:hover{
-      text-decoration: none;
-      color: #8c0000;
-    }
-    .social-links-icon{
-      position: absolute;
-      bottom: 30px;
-      margin-left: 20px;
-    }
-    .social-links.open {
-      display: flex; /* Mostrar links quando o menu estiver aberto */
-      opacity: 1; /* Torna os links visíveis */
-    }
-  
-    .menu-line:nth-child(1).open {
-      transform: rotate(-45deg) translate(-5px, 6px);
-    }
-  
-    .menu-line:nth-child(2).open {
-      opacity: 0;
-    }
-  
-    .menu-line:nth-child(3).open {
-      transform: rotate(45deg) translate(-5px, -6px);
-    }
+.menu-line {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #f29d38;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Mostrar o ícone do menu em telas menores */
   }
-  
+  .boxCar {
+    display: flex;
+    align-items: center;
+  }
+  .boxCar img {
+    width: 40px;
+    padding-right: 15px;
+  }
+  .boxCar img:hover {
+    transform: scale(1.05);
+  }
+  .nav-links,
+  .social-links {
+    display: none; /* Ocultar links de navegação inicialmente em telas menores */
+    flex-direction: column;
+    /* Adiciona uma transição suave para a propriedade opacity */
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    position: absolute;
+    top: 86px; /* Ajuste conforme necessário */
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  .nav-links {
+    display: none;
+  }
+  .navbar li {
+    display: flex;
+  }
+  .navbar li a {
+    text-align: left;
+    width: 50px;
+  }
+  .nav-links-mobile {
+    display: block;
+    margin: 20px 0 0 -70px;
+    text-align: center;
+  }
+  .nav-links-mobile li {
+    width: 150px;
+    height: 10px;
+    font-size: 22px;
+    font-family: Helvetica, sans-serif;
+    padding: 20px 5px;
+    text-align: left;
+  }
+
+  .nav-links-mobile li a {
+    text-decoration: none;
+    color: #f29d38;
+    text-align: left;
+  }
+  .nav-links-mobile li a:hover {
+    text-decoration: none;
+    color: #8c0000;
+  }
+  .social-links-icon {
+    position: absolute;
+    bottom: 30px;
+    margin-left: 20px;
+  }
+  .social-links.open {
+    display: flex; /* Mostrar links quando o menu estiver aberto */
+    opacity: 1; /* Torna os links visíveis */
+  }
+
+  .menu-line:nth-child(1).open {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-line:nth-child(2).open {
+    opacity: 0;
+  }
+
+  .menu-line:nth-child(3).open {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  /* Estilos específicos para o carrinho */
+  .carinho_compras {
+    background-color: #ffffff;
+    padding: 20px;
+    color: #f29d38;
+    position: absolute;
+    top: 212px; /* Posição apropriada para que o carrinho apareça abaixo do cabeçalho */
+    right: 0;
+    width: 100%;
+    box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(
+      -100%
+    ); /* Inicialmente, o carrinho estará escondido acima do cabeçalho */
+  }
+
+  .carinho_compras.open {
+    transform: translateY(0); /* Mostra o carrinho quando estiver aberto */
+  }
+
+  .carrinho-itens {
+    max-height: 200px; /* Altura máxima para a lista de itens */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+  }
+
+  .total-carrinho {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .total-carrinho strong {
+    font-weight: bold;
+  }
+
+  button[type="button"] {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #f29d38;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button[type="button"]:hover {
+    background-color: #8c0000;
+  }
+}

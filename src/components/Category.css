@@ -5,6 +5,9 @@
   margin-bottom: 5px;
   padding: 20px 10px;
 }
+.boxCate:hover{
+  transform: scale(1.05);
+}
 
 .boxCate {
   display: flex;
