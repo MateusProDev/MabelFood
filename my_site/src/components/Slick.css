@@ -4,8 +4,10 @@
 }
 
 .img-slick img {
-    width: 100%;
-    height: 70vh;
+    width: 95% !important;
+    height: 25vh !important;
+    border-radius: 10px;
+    margin: auto;
 }
 
 .conteudo-slick {

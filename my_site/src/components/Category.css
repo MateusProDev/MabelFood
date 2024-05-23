@@ -1,0 +1,44 @@
+.categoryContainer {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: -10px;
+  padding: 20px 10px;
+}
+
+.boxCate {
+  display: flex;
+  padding: 0 10px;
+  flex: 0 0 auto;
+  margin-right: 10px;
+  text-align: center;
+  align-items: center;
+  border: 1px #dddddd solid;
+  border-radius: 10px;
+}
+
+.boxCate img {
+  width: 50px; /* Ajuste o tamanho conforme necessário */
+  height: 50px; /* Ajuste o tamanho conforme necessário */
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.boxCate h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Adicionar estilo para a barra de rolagem se necessário */
+.categoryContainer::-webkit-scrollbar {
+  height: 8px;
+}
+
+.categoryContainer::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.categoryContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

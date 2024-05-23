@@ -3,7 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Slick from './components/Slick';
-import ApiData from './components/ApiData'
+import ApiData from './components/ApiData';
+import Category from './components/Category';
 // import ApiData from './components/ApiData';
 
 // Componentes para diferentes rotas
@@ -27,7 +28,8 @@ const App = () => {
       <div>
         {/* Barra de navegação */}
         <NavBar />
-
+        {/* Categorias */}
+        <Category />
         {/* Definição de rotas */}
         <Routes>
           <Route path="/" element={<Home />} />
