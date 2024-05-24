@@ -55,7 +55,9 @@
 .slick-next::before{
     display: none !important;
 }
-
+.slick-arrow::before{
+    display: none;
+}
 .conteudo-slick button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px #333333;
@@ -97,6 +99,15 @@ button .slick-arrow {
     .conteudo-slick button {
         margin-top: 100px;
 
+    }
+    .slick-next{
+        display: none !important;
+    }
+    .slick-next::before{
+        display: none !important;
+    }
+    .slick-arrow::before{
+        display: none;
     }
 }
 
