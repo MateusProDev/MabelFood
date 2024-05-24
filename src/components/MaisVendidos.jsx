@@ -21,14 +21,14 @@ const products = [
     name: "Hambúrguer completo",
     content: "Frete Grátis",
     price: 12.99,
-    imgSrc: "cheeseburger",
+    imgSrc: "/img/burguer.jpg",
   },
   {
     id: 4,
     name: "Pizza Vegetariana",
     content: "Frete Grátis",
     price: 32.99,
-    imgSrc: "vegetariana",
+    imgSrc: "/img/vege.jpg",
   },
 ];
 
