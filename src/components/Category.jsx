@@ -17,7 +17,7 @@ const Category = () => {
         <h3>HotDog</h3>
       </div>
       <div className="boxCate">
-        <img src="./img/HotDog.png" alt="HotDog" />
+        <img src="./img/Soda.png" alt="Bebidas" />
         <h3>Bebidas</h3>
       </div>
     </div>
