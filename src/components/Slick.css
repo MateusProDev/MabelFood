@@ -49,8 +49,8 @@
     margin-top: 20px; /* Ajuste conforme necessário */
     font-size: 16px;
 }
-.slick-arrow{
-    display: none;
+.slick-arrow::before{
+    display: none !important;
 }
 
 .conteudo-slick button:hover {
@@ -60,7 +60,9 @@
 button .slick-arrow {
     display: none !important;
   }
-
+.slick-next{
+    display: none;
+}
 
 /* Estilos responsivos */
 @media (max-width: 469px) {
