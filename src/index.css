@@ -3,8 +3,7 @@ body{
   background-color: #f9f9f9 !important;
 }
 .mainConteudo{
-  width: 70% !important;
-   
+  width: 100% !important;
 }
 @media (max-width: 768px) {
   .mainConteudo{

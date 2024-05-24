@@ -11,60 +11,71 @@ const NavBar = ({ cart, total }) => {
     setCartOpen(false); // Fecha o carrinho quando o menu é aberto
   };
 
+  const handleCartToggle = () => {
+    setCartOpen(!isCartOpen);
+    setMenuOpen(false); // Fecha o menu quando o carrinho é aberto
+  };
+
+  const handleFinalizePurchase = () => {
+    const message = cart.map(item => `${item.name} - R$${item.price.toFixed(2)}`).join("\n");
+    const totalValue = Number(total).toFixed(2); // Corrigido para garantir que total seja um número
+    const whatsappMessage = `Pedido:\n${message}\n\nTotal: R$${totalValue}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=5585991470709&text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <nav className={`navbar ${isMenuOpen ? "open" : ""}`}>
       <div className="logo-container">
         <img src="./img/Logo.png" alt="Logo" className="logo" />
       </div>
-      <div className="boxCar">
-        
-        <div className="menu-icon" onClick={handleMenuToggle}>
-          <img
-          src="./img/ShoppingBag.png"
-          alt="CAR"
-        />
-        </div>
-      </div>
       <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Inicio</Link>
         </li>
         <li>
-          <Link to="/about">Sobre</Link>
+          <Link to="/about">Pizzas</Link>
         </li>
         <li>
-          <Link to="/contact">Contato</Link>
+          <Link to="/contact">Hamburguers</Link>
         </li>
         <li>
-          <Link to="/avaliações">Avaliações</Link>
+          <Link to="/contact">HotDogs</Link>
+        </li>
+        <li>
+          <Link to="/avaliações">Bebidas</Link>
         </li>
       </ul>
-      <div className={`social-links ${isMenuOpen ? "open" : ""}`}>
-        <div className="nav-links-mobile">
-          <section className={`carinho_compras ${isCartOpen ? "open" : ""}`}>
-            <h2>Carrinho</h2>
-            <div className="carrinho-itens" id="carrinho-tbody">
-              {cart.length === 0 ? (
-                <p>Seu carrinho está vazio</p>
-              ) : (
-                cart.map((item, index) => (
-                  <div key={index}>
-                    <span>
-                      {item.name} - R${item.price.toFixed(2)}
-                    </span>
-                  </div>
-                ))
-              )}
-            </div>
-            <div className="total-carrinho">
-              <strong>Total</strong>
-              <span id="total-carrinho">R${total}</span>
-            </div>
-            <button type="button" onClick={() => alert("Compra Finalizada!")}>
-              Finalizar Compra
-            </button>
-          </section>
+      <div className="boxCar" onClick={handleCartToggle}>
+        <img src="./img/ShoppingBag.png" alt="Cart" className="cart-icon" />
+      </div>
+      <section className={`carinho_compras ${isCartOpen ? "open" : ""}`}>
+        <h2 id="titleCar">Carrinho</h2>
+        <div className="carrinho-itens" id="carrinho-tbody">
+          {cart.length === 0 ? (
+            <p className="priceCar">Seu carrinho está vazio</p>
+          ) : (
+            cart.map((item, index) => (
+              <div key={index}>
+                <span className="priceCar">
+                  {item.name} - R${item.price.toFixed(2)}
+                </span>
+              </div>
+            ))
+          )}
         </div>
+        <div className="total-carrinho">
+          <strong>Total:</strong>
+          <span id="total-carrinho">{" R$" + Number(total).toFixed(2)}</span>
+        </div>
+        <button className="btnCar" type="button" onClick={handleFinalizePurchase}>
+          Finalizar Compra
+        </button>
+      </section>
+      <div className="menu-icon" onClick={handleMenuToggle}>
+        <div className="menu-line"></div>
+        <div className="menu-line"></div>
+        <div className="menu-line"></div>
       </div>
     </nav>
   );
