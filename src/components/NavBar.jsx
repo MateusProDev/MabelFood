@@ -19,7 +19,7 @@ const NavBar = ({ cart, total }) => {
   const handleFinalizePurchase = () => {
     const message = cart.map(item => `${item.name} - R$${item.price.toFixed(2)}`).join("\n");
     const totalValue = Number(total).toFixed(2); // Corrigido para garantir que total seja um número
-    const whatsappMessage = `Desejo concluir meu pedido:\n\n ${message}\n\nTotal: R$${totalValue}\n\nPreencha as informações:\n\nNome:\nEndereço:\nForma de pagamento:\nPix, Debito, Credito`;
+    const whatsappMessage = `Desejo concluir meu pedido:\n\n${message}\n\nTotal: R$${totalValue}\n\nPreencha as informações:\n\nNome:\nEndereço:\nForma de pagamento:\nPix, Debito, Credito`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=5585991470709&text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, "_blank");
   };
