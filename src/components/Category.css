@@ -13,7 +13,7 @@
   display: flex;
   padding: 0 10px;
   flex: 0 0 auto;
-  margin-right: 10px;
+  margin: -7px 10px -10px 0;
   text-align: center;
   align-items: center;
   border: 1px #dddddd solid;
