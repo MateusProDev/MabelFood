@@ -50,7 +50,7 @@ const MaisVendidos = ({ addToCart }) => {
               <div className="box-value">
                 <span>R${product.price.toFixed(2)}</span>
                 <button type="button" onClick={() => addToCart(product)}>
-                  Adicionar ao Carrinho
+                  Adicionar a sacola
                 </button>
               </div>
             </div>
