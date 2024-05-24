@@ -19,7 +19,7 @@ const NavBar = ({ cart, total }) => {
   const handleFinalizePurchase = () => {
     const message = cart.map(item => `${item.name} - R$${item.price.toFixed(2)}`).join("\n");
     const totalValue = Number(total).toFixed(2); // Corrigido para garantir que total seja um número
-    const whatsappMessage = `Pedido:\n${message}\n\nTotal: R$${totalValue}`;
+    const whatsappMessage = `Desejo concluir meu pedido:\n${message}\n\nTotal: R$${totalValue} <br /> Digite seu nome: seu endereço: e escolha a forma de pagamento: Pix, Debito, Credito`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=5585991470709&text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, "_blank");
   };
