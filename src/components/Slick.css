@@ -1,6 +1,6 @@
 .img-slick {
     position: relative;
-    width: 100%;
+    width: 95%;
 }
 
 .img-slick img {
@@ -11,7 +11,7 @@
 }
 
 .conteudo-slick {
-    width: 100%;
+    width: 95%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -49,17 +49,24 @@
     margin-top: 20px; /* Ajuste conforme necessário */
     font-size: 16px;
 }
+.slick-arrow{
+    display: none;
+}
 
 .conteudo-slick button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px #333333;
 }
+button .slick-arrow {
+    display: none !important;
+  }
+
 
 /* Estilos responsivos */
 @media (max-width: 469px) {
     .img-slick img {
-        width: 100%;
-        height: 70vh;
+        width: 95%;
+        height: 25vh;
         margin-top: 5px;
     }
 
@@ -84,6 +91,7 @@
 
     .conteudo-slick button {
         margin-top: 100px;
+
     }
 }
 
@@ -91,7 +99,7 @@
 @media (min-width: 469px) and (max-width: 1024px) {
     .img-slick img {
         margin-top: 5px;
-        height: 60vh; /* Ajuste conforme necessário para telas maiores */
+        height: 25vh; /* Ajuste conforme necessário para telas maiores */
     }
 
     .conteudo-slick h1 {
@@ -108,6 +116,7 @@
     }
     .conteudo-slick button {
         margin-top: 100px;
+
     }
 }
 

@@ -49,7 +49,7 @@ const MaisVendidos = ({ addToCart }) => {
               <strong>{product.content}</strong>
               <div className="box-value">
                 <span>R${product.price.toFixed(2)}</span>
-                <button type="button" onClick={() => addToCart(product)}>
+                <button className="btn" type="button" onClick={() => addToCart(product)}>
                   Adicionar a sacola
                 </button>
               </div>

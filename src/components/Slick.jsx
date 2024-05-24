@@ -17,13 +17,13 @@ const Slick = () => {
   return (
     <Slider {...settings}>
         <div className='img-slick'>
-            <img src="./img/bannerpizza.png" alt="Dunas de fortaleza" />
+            <img src="./img/bannerpizza.png" alt="bannerpizza" />
         </div>
         <div className='img-slick'>
-            <img src="./img/bannerpizza.png" alt="estatua de iracema em fortaleza" />
+            <img src="./img/bannerpizza.png" alt="bannerpizza2" />
         </div>
         <div className='img-slick'>
-            <img src="./img/bannerpizza.png" alt="praia de fortaleza" />
+            <img src="./img/bannerpizza.png" alt="bannerpizza3" />
         </div>
     </Slider>
   );

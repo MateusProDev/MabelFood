@@ -200,18 +200,4 @@ body {
     font-weight: bold;
   }
 
-  button[type="button"] {
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #f29d38;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  button[type="button"]:hover {
-    background-color: #8c0000;
-  }
 }
