@@ -34,16 +34,16 @@ const NavBar = ({ cart, total }) => {
           <Link to="/">Inicio</Link>
         </li>
         <li>
-          <Link to="/about">Pizzas</Link>
+          <Link to="/pizzas">Pizzas</Link>
         </li>
         <li>
-          <Link to="/contact">Hamburguers</Link>
+          <Link to="/burguers">Burguers</Link>
         </li>
         <li>
-          <Link to="/contact">HotDogs</Link>
+          <Link to="/hotdogs">HotDogs</Link>
         </li>
         <li>
-          <Link to="/avaliações">Bebidas</Link>
+          <Link to="/bebidas">Bebidas</Link>
         </li>
       </ul>
       <div className="boxCar" onClick={handleCartToggle}>
