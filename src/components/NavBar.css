@@ -150,18 +150,13 @@ body {
 
   .navbar li {
     display: block;
-    margin: 5px 10px 5px 20px;
+    margin: 5px 10px 5px 0px;
     padding: 5px;
   }
-  /* Estiliza o primeiro item da lista */
-.navbar li:first-child {
-  margin: 0;
-}
 
-/* Estiliza o segundo item da lista */
-.navbar li:nth-child(2) {
-  margin: 0;
-}
+  .navbar li:last-child {
+    margin-left: -5px;
+  }
 
   .nav-links-mobile {
     display: block;
