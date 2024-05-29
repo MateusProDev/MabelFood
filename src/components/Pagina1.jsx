@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import "./pagina1.css";
 
 const products = [
@@ -18,7 +18,7 @@ const products = [
   },
   {
     id: 3,
-    name: "Hambúrguer completo",
+    name: "Hambúrguer X Tudo",
     content: "Entrega Grátis",
     price: 12.99,
     imgSrc: "/img/burguer.jpg",
@@ -34,8 +34,7 @@ const products = [
 
 const Pagina1 = ({ addToCart }) => {
   return (
-    <div className="containerFlexMais">
-      <div className="flexMais">
+    <div className="pagina1-container">
       <div className="seeHome">
         <h1>PIZZAS</h1>
         <p>Conheça os sabores das nossas pizzas</p>
@@ -58,9 +57,8 @@ const Pagina1 = ({ addToCart }) => {
           </section>
         ))}
       </div>
-      </div>
     </div>
   );
 };
 
-export default Pagina1
+export default Pagina1;

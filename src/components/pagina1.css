@@ -1,38 +1,41 @@
-.container {
+.pagina1-container .container {
   display: flex;
   overflow-x: auto; /* Habilita a rolagem horizontal */
   white-space: nowrap; /* Evita que os itens quebrem para a próxima linha */
   margin: 10px;
 }
-.seeHome {
+
+.pagina1-container .seeHome {
   display: block;
   justify-content: space-between;
   padding: 0 10px 15px 10px;
   margin: -10px 0 -30px 0;
   align-items: center;
 }
-.produto {
+
+.pagina1-container .produto {
   display: block; /* Torna os itens em blocos inline */
   width: 200px; /* Define a largura fixa de cada item */
   margin-right: 20px; /* Adiciona um espaçamento entre os itens */
 }
 
-.produto img {
+.pagina1-container .produto img {
   width: 200px;
   height: 100px;
   object-fit: cover; /* Para garantir que a imagem mantenha sua proporção */
   margin-right: 20px;
 }
-.produto img:hover {
+
+.pagina1-container .produto img:hover {
   transform: scale(1.05);
 }
 
-.produto .box-value {
+.pagina1-container .produto .box-value {
   display: flex;
   flex-direction: column;
 }
 
-.btn {
+.pagina1-container .btn {
   width: 100%;
   padding: 10px 20px;
   background-color: #F29D38;
@@ -43,49 +46,51 @@
   transition: background-color 0.3s;
 }
 
-.btn:hover {
+.pagina1-container .btn:hover {
   background-color: #8c0000;
 }
 
-.produto strong {
+.pagina1-container .produto strong {
   font-weight: bold;
   color: #333;
   font-size: 16px;
 }
 
-.produto span {
+.pagina1-container .produto span {
   color: #666;
   font-size: 22px;
   margin: 5px 0;
 }
-h1 {
+
+.pagina1-container h1 {
   font-size: 26px;
   color: #333;
   margin-bottom: -10px;
 }
 
-h2 {
+.pagina1-container h2 {
   font-size: 20px;
   margin-bottom: 10px;
   color: #333;
 }
 
-p {
-  font-size: 18px ;
+.pagina1-container p {
+  font-size: 18px;
   color: #8c0000c0;
 }
+
 /* Estilos responsivos */
 @media (max-width: 469px) {
-  .container {
+  .pagina1-container .container {
     flex-direction: column; /* Alinha os itens verticalmente */
     white-space: normal; /* Permite quebra de linha */
   }
-  .produto {
+  .pagina1-container .produto {
     width: 100%; /* Ocupa 100% da largura do contêiner pai */
     margin-right: 0; /* Remove margem à direita */
     margin-bottom: 20px; /* Adiciona margem inferior para espaçamento */
   }
-  .produto img {
+  .pagina1-container .produto img {
     width: 100%;
     height: 150px;
     object-fit: cover; /* Para garantir que a imagem mantenha sua proporção */
@@ -98,10 +103,10 @@ p {
 }
 
 @media (min-width: 1025px) {
-  .containerFlexMais {
+  .pagina1-container .containerFlexMais {
     display: flex;
   }
-  .flexMais {
+  .pagina1-container .flexMais {
     margin: auto;
   }
 }

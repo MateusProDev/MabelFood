@@ -18,7 +18,7 @@ const products = [
   },
   {
     id: 3,
-    name: "Hambúrguer completo",
+    name: "Hambúrguer X Tudo",
     content: "Entrega Grátis",
     price: 12.99,
     imgSrc: "/img/burguer.jpg",

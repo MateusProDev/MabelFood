@@ -2,6 +2,7 @@
 .img-slick {
     position: relative;
     width: 50%; /* Ajustado para 100% */
+    
 }
 
 .img-slick img {
@@ -19,6 +20,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
+    
 }
 
 .conteudo-slick h1 {
