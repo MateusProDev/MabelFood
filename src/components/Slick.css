@@ -1,17 +1,18 @@
+/* Ajustes gerais para o slider */
 .img-slick {
     position: relative;
-    width: 95%;
+    width: 100%; /* Ajustado para 100% */
 }
 
 .img-slick img {
-    width: 95% !important;
+    width: 100% !important; /* Ajustado para 100% */
     height: 25vh !important;
     border-radius: 10px;
     margin: auto;
 }
 
 .conteudo-slick {
-    width: 95%;
+    width: 100%; /* Ajustado para 100% */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -49,30 +50,21 @@
     margin-top: 20px; /* Ajuste conforme necessário */
     font-size: 16px;
 }
-.slick-next{
-    display: none !important;
+
+.slick-next,
+.slick-prev {
+    display: none !important; /* Escondendo setas de navegação */
 }
-.slick-next::before{
-    display: none !important;
-}
-.slick-arrow::before{
-    display: none;
-}
+
 .conteudo-slick button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px #333333;
-}
-button .slick-arrow {
-    display: none !important;
-  }
-.slick-next{
-    display: none;
 }
 
 /* Estilos responsivos */
 @media (max-width: 469px) {
     .img-slick img {
-        width: 95%;
+        width: 100%; /* Ajustado para 100% */
         height: 25vh;
         margin-top: 5px;
     }
@@ -98,16 +90,6 @@ button .slick-arrow {
 
     .conteudo-slick button {
         margin-top: 100px;
-
-    }
-    .slick-next{
-        display: none !important;
-    }
-    .slick-next::before{
-        display: none !important;
-    }
-    .slick-arrow::before{
-        display: none;
     }
 }
 
@@ -130,9 +112,9 @@ button .slick-arrow {
         font-size: 20px;
         margin: 0 auto; /* Centralizar o texto horizontalmente */
     }
+
     .conteudo-slick button {
         margin-top: 100px;
-
     }
 }
 
@@ -155,6 +137,7 @@ button .slick-arrow {
         font-size: 22px;
         margin: 0 auto; /* Centralizar o texto horizontalmente */
     }
+
     .conteudo-slick button {
         margin-top: 100px;
     }

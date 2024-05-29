@@ -1,34 +1,42 @@
+// Importando o Slider do pacote 'react-slick'
 import Slider from 'react-slick';
+
+// Importando os arquivos CSS necessários para o funcionamento do slider
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './Slick.css'
 
+// Importando um arquivo CSS personalizado para estilizar o slider
+import './Slick.css';
+
+// Definindo o componente funcional Slick
 const Slick = () => {
+  // Definindo as configurações do slider
   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,  // Adicionando autoplay
-    autoplaySpeed: 5000,  // Definindo a velocidade da reprodução automática em milissegundos
+    dots: true,            // Mostra os pontos de navegação abaixo do slider
+    infinite: true,        // Faz o slider ser infinito (volta ao início ao terminar)
+    speed: 500,            // Define a velocidade da transição entre slides (em milissegundos)
+    slidesToShow: 1,       // Número de slides mostrados por vez
+    slidesToScroll: 1,     // Número de slides que são rolados por vez
+    autoplay: true,        // Habilita a reprodução automática dos slides
+    autoplaySpeed: 5000,   // Define a velocidade da reprodução automática (em milissegundos)
   };
 
+  // Retorna o JSX do componente Slider
   return (
-    <Slider {...settings}>
-        <div className='img-slick'>
-            <img src="./img/bannerpizza.png" alt="bannerpizza" />
-        </div>
-        <div className='img-slick'>
-            <img src="./img/bannerpizza.png" alt="bannerpizza2" />
-        </div>
-        <div className='img-slick'>
-            <img src="./img/bannerpizza.png" alt="bannerpizza3" />
-        </div>
+    <Slider {...settings}>   {/* Passa as configurações definidas para o Slider */}
+      {/* Definindo cada slide com uma classe específica para estilização */}
+      <div className='img-slick'>
+        <img src="./img/bannerpizza.png" alt="bannerpizza" />   {/* Imagem do primeiro slide */}
+      </div>
+      <div className='img-slick'>
+        <img src="./img/bannerpizza.png" alt="bannerpizza2" />  {/* Imagem do segundo slide */}
+      </div>
+      <div className='img-slick'>
+        <img src="./img/bannerpizza.png" alt="bannerpizza3" />  {/* Imagem do terceiro slide */}
+      </div>
     </Slider>
   );
 };
 
+// Exporta o componente Slick para ser usado em outras partes do aplicativo
 export default Slick;
-
-
