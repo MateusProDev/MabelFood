@@ -4,7 +4,6 @@ import NavBar from "./components/NavBar";
 import Slick from "./components/Slick";
 import Category from "./components/Category";
 import MaisVendidos from "./components/MaisVendidos";
-import ApiData from "./components/ApiData";
 
 // Componente principal da aplicação
 const App = () => {
@@ -29,8 +28,6 @@ const App = () => {
       <Slick />
       {/* Os mais pedidos */}
       <MaisVendidos addToCart={addToCart} />
-      {/* Avaliações */}
-      <ApiData />
     </div>
   );
 
