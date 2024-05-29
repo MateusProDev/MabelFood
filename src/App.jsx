@@ -4,6 +4,8 @@ import NavBar from "./components/NavBar";
 import Slick from "./components/Slick";
 import Category from "./components/Category";
 import MaisVendidos from "./components/MaisVendidos";
+import Pagina1 from "./components/Pagina1";
+
 
 // Componente principal da aplicação
 const App = () => {
@@ -35,6 +37,8 @@ const App = () => {
     <div>
       {/* Barra de navegação */}
       <NavBar cart={cart} total={getTotal()} />
+      <Category />
+      <Pagina1 />
     </div>
   );
 
