@@ -33,11 +33,24 @@ body {
 
 .navbar li {
   display: flex;
+  font-style: italic;
   flex-direction: column;
   align-items: center;
   margin: 0;
-  width: 95px;
+  width: 90px;
   overflow: hidden;
+}
+/* Estiliza o primeiro item da lista */
+.navbar li:first-child {
+  color: #8c0000 !important;
+  font-weight: bold;
+  margin: 0 -10px;
+}
+
+/* Estiliza o segundo item da lista */
+.navbar li:nth-child(2) {
+  font-style: italic;
+  margin: 0 -10px;
 }
 
 .navbar li a {
@@ -47,6 +60,8 @@ body {
   display: flex;
   text-align: center;
   align-items: center;
+  width: 80px;
+  justify-content: space-around;
   height: 100%;
 }
 
@@ -54,6 +69,7 @@ body {
   transform: scale(1.1);
   color: #8c0000;
 }
+
 
 .nav-links-mobile {
   display: none;

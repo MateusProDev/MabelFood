@@ -1,11 +1,11 @@
 /* Ajustes gerais para o slider */
 .img-slick {
     position: relative;
-    width: 100%; /* Ajustado para 100% */
+    width: 50%; /* Ajustado para 100% */
 }
 
 .img-slick img {
-    width: 100%; /* Ajustado para 100% */
+    width: 96%; /* Ajustado para 100% */
     height: 25vh !important;
     border-radius: 10px;
     margin: auto;
