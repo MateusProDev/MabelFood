@@ -27,7 +27,7 @@ body {
 
 .nav-links {
   display: flex;
-  padding: 0;
+  padding-right: 100px;
   text-align: center;
 }
 

@@ -23,6 +23,9 @@
   object-fit: cover; /* Para garantir que a imagem mantenha sua proporção */
   margin-right: 20px;
 }
+.produto img:hover{
+  transform: scale(1.05);
+}
 
 .produto .box-value {
   display: flex;
@@ -70,4 +73,24 @@ h4 {
   padding-top: 5px;
   color: #8c0000c0;
   text-decoration: underline !important;
+}
+/* Estilos responsivos */
+@media (max-width: 469px) {
+  
+}
+
+/* Estilos para telas médias (tablets) */
+@media (min-width: 469px) and (max-width: 1024px) {
+  
+}
+
+/* Estilos para telas maiores (desktops) */
+@media (min-width: 1025px) {
+  
+  .containerFlexMais{
+    display: flex;
+  }
+  .flexMais{
+    margin: auto;
+  }
 }

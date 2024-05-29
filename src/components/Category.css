@@ -1,11 +1,20 @@
+.containerFlexCar {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  width: 100%; /* Garante que ocupe 100% da largura do contêiner pai */
+  box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
 .categoryContainer {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
-  margin-bottom: 5px;
-  padding: 20px 10px;
+  margin: 0; /* Remove margens */
+  padding: 20px 5px;
+  box-sizing: border-box; /* Inclui padding e border na largura total */
 }
-.boxCate:hover{
+
+.boxCate:hover {
   transform: scale(1.05);
 }
 
@@ -13,18 +22,19 @@
   display: flex;
   padding: 0 10px;
   flex: 0 0 auto;
-  margin: -7px 10px -10px 0;
+  margin: 0 5px; /* Ajusta margens */
   text-align: center;
   align-items: center;
   border: 1px #dddddd solid;
   border-radius: 10px;
+  box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
 .boxCate img {
   width: 50px; /* Ajuste o tamanho conforme necessário */
   height: 50px; /* Ajuste o tamanho conforme necessário */
-  display: block;
-  margin: 0 auto 10px;
+  display: flex;
+  margin: 10px 0; /* Ajusta margens */
 }
 
 .boxCate h3 {
@@ -32,7 +42,7 @@
   margin: 0;
 }
 
-/* Adicionar estilo para a barra de rolagem se necessário */
+/* Estilo para a barra de rolagem */
 .categoryContainer::-webkit-scrollbar {
   height: 8px;
 }
@@ -44,4 +54,21 @@
 
 .categoryContainer::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* Estilos responsivos */
+@media (max-width: 469px) {
+  /* Ajustes específicos para telas pequenas, se necessário */
+}
+
+@media (min-width: 469px) and (max-width: 1024px) {
+  .categoryContainer {
+    margin: 0 auto; /* Remove margem importante e centraliza */
+  }
+}
+
+@media (min-width: 1025px) {
+  .categoryContainer {
+    margin: 0 auto; /* Remove margem importante e centraliza */
+  }
 }

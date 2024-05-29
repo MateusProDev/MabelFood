@@ -34,7 +34,8 @@ const products = [
 
 const MaisVendidos = ({ addToCart }) => {
   return (
-    <div>
+    <div className="containerFlexMais">
+      <div className="flexMais">
       <div className="seeHome">
         <h1>Os mais vendidos</h1>
         <h4>Ver Todos</h4>
@@ -56,6 +57,7 @@ const MaisVendidos = ({ addToCart }) => {
             </div>
           </section>
         ))}
+      </div>
       </div>
     </div>
   );
