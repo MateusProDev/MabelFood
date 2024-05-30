@@ -32,7 +32,7 @@ const Slick = () => {
         <img src="./img/banner2.png" alt="banner12 promoção de hamburguer" />  {/* Imagem do segundo slide */}
       </div>
       <div className='img-slick'>
-        <img src="./img/banner1.png" alt="banner3 promoçao de bebidas" />  {/* Imagem do terceiro slide */}
+        <img src="./img/banner3.png" alt="banner3 promoçao de bebidas" />  {/* Imagem do terceiro slide */}
       </div>
     </Slider>
   );
