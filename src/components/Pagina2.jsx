@@ -4,30 +4,30 @@ import "./pagina1.css";
 const products = [
   {
     id: 1,
-    name: "Burguer Premium",
+    name: "Burguer Mac",
     content: "Entrega Grátis",
-    price: 34.99,
+    price: 16.99,
     imgSrc: "/img/BurguerPremium.jpg",
   },
   {
     id: 2,
     name: "Burguer Frango",
     content: "Entrega Grátis",
-    price: 29.99,
+    price: 14.99,
     imgSrc: "/img/BurguerFrango.jpg",
   },
   {
     id: 3,
-    name: "Burguer Mac",
+    name: "Burguer Premium",
     content: "Entrega Grátis",
-    price: 12.99,
+    price: 22.99,
     imgSrc: "/img/burguer.jpg",
   },
   {
     id: 4,
-    name: "Pizza Vegetariana",
+    name: "Burguer Master",
     content: "Entrega Grátis",
-    price: 32.99,
+    price: 27.99,
     imgSrc: "/img/BurguerMaster.jpg",
   },
 ];

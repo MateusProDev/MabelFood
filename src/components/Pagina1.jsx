@@ -18,10 +18,10 @@ const products = [
   },
   {
     id: 3,
-    name: "Hambúrguer X Tudo",
+    name: "Pizza de chocolate",
     content: "Entrega Grátis",
-    price: 12.99,
-    imgSrc: "/img/burguer.jpg",
+    price: 36.99,
+    imgSrc: "/img/pizzadoce.jpg",
   },
   {
     id: 4,
