@@ -5,6 +5,9 @@ import Slick from "./components/Slick";
 import Category from "./components/Category";
 import MaisVendidos from "./components/MaisVendidos";
 import Pagina1 from "./components/Pagina1";
+import Pagina2 from "./components/Pagina2";
+import Pagina3 from "./components/Pagina3";
+import Pagina4 from "./components/Pagina4";
 
 
 // Componente principal da aplicação
@@ -46,6 +49,8 @@ const App = () => {
     <div>
       {/* Barra de navegação */}
       <NavBar cart={cart} total={getTotal()} />
+      <Category />
+      <Pagina2 />
     </div>
   );
 
@@ -53,12 +58,16 @@ const App = () => {
     <div>
       {/* Barra de navegação */}
       <NavBar cart={cart} total={getTotal()} />
+      <Category />
+      <Pagina3 />
     </div>
   );
   const Bebidas = () => (
     <div>
       {/* Barra de navegação */}
       <NavBar cart={cart} total={getTotal()} />
+      <Category />
+      <Pagina4 />
     </div>
   );
 

@@ -1,9 +1,64 @@
-import React from 'react'
+import React from 'react';
 
-const Pagina4 = () => {
+
+const products = [
+  {
+    id: 1,
+    name: "Pizza de Pepperoni",
+    content: "Entrega Grátis",
+    price: 34.99,
+    imgSrc: "/img/pepperoni.jpg",
+  },
+  {
+    id: 2,
+    name: "Pizza Margherita",
+    content: "Entrega Grátis",
+    price: 29.99,
+    imgSrc: "/img/marg.jpg",
+  },
+  {
+    id: 3,
+    name: "Hambúrguer X Tudo",
+    content: "Entrega Grátis",
+    price: 12.99,
+    imgSrc: "/img/burguer.jpg",
+  },
+  {
+    id: 4,
+    name: "Pizza Vegetariana",
+    content: "Entrega Grátis",
+    price: 32.99,
+    imgSrc: "/img/vege.jpg",
+  },
+];
+
+const Pagina4 = ({ addToCart }) => {
   return (
-    <div>Bebidas</div>
-  )
-}
+    <div className="pagina1-container">
+      <div className="seeHome">
+        <h1>BEBIDAS</h1>
+        <p>Conheça os sabores das nossas Bebidas</p>
+      </div>
+      <div className="container"> {/* Adiciona a classe container aqui */}
+        {products.map((product) => (
+          <section key={product.id} className="produto"> {/* Mantém a classe produto aqui */}
+            <h2>{product.name}</h2>
+            <div>
+              <img src={product.imgSrc} alt={product.name} />
+              <br />
+              <strong>{product.content}</strong>
+              <div className="box-value">
+                <span>R${product.price.toFixed(2)}</span>
+                <button className="btn" type="button" onClick={() => addToCart(product)}>
+                  Adicionar a sacola
+                </button>
+              </div>
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default Pagina4
+export default Pagina4;

@@ -37,7 +37,7 @@ const Pagina1 = ({ addToCart }) => {
     <div className="pagina1-container">
       <div className="seeHome">
         <h1>PIZZAS</h1>
-        <p>Conheça os sabores das nossas pizzas</p>
+        <p>Conheça os sabores das nossas Pizzas</p>
       </div>
       <div className="container"> {/* Adiciona a classe container aqui */}
         {products.map((product) => (
