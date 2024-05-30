@@ -4,31 +4,38 @@ import "./pagina1.css";
 const products = [
   {
     id: 1,
-    name: "Pizza de Pepperoni",
+    name: "Coca Cola",
     content: "Entrega Grátis",
     price: 34.99,
-    imgSrc: "/img/pepperoni.jpg",
+    imgSrc: "/img/cocacola.jpg",
   },
   {
     id: 2,
-    name: "Pizza Margherita",
+    name: "Pepsi",
     content: "Entrega Grátis",
     price: 29.99,
-    imgSrc: "/img/marg.jpg",
+    imgSrc: "/img/pepsi.jpg",
   },
   {
     id: 3,
-    name: "Hambúrguer X Tudo",
+    name: "Fata Laranja",
     content: "Entrega Grátis",
     price: 12.99,
-    imgSrc: "/img/burguer.jpg",
+    imgSrc: "/img/fanta.jpg",
   },
   {
     id: 4,
-    name: "Pizza Vegetariana",
+    name: "Vitamina de morango",
     content: "Entrega Grátis",
     price: 32.99,
     imgSrc: "/img/vege.jpg",
+  },
+  {
+    id: 5,
+    name: "Suco de Laranja",
+    content: "Entrega Grátis",
+    price: 32.99,
+    imgSrc: "/img/laranja.jpg",
   },
 ];
 
