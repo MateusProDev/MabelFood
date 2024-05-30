@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./pagina1.css";
 
 const products = [
   {

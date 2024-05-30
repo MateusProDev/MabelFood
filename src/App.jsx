@@ -41,7 +41,7 @@ const App = () => {
       {/* Barra de navegação */}
       <NavBar cart={cart} total={getTotal()} />
       <Category />
-      <Pagina1 />
+      <Pagina1 addToCart={addToCart}/>
     </div>
   );
 
@@ -50,7 +50,7 @@ const App = () => {
       {/* Barra de navegação */}
       <NavBar cart={cart} total={getTotal()} />
       <Category />
-      <Pagina2 />
+      <Pagina2 addToCart={addToCart}/>
     </div>
   );
 
@@ -59,7 +59,7 @@ const App = () => {
       {/* Barra de navegação */}
       <NavBar cart={cart} total={getTotal()} />
       <Category />
-      <Pagina3 />
+      <Pagina3 addToCart={addToCart}/>
     </div>
   );
   const Bebidas = () => (
@@ -67,7 +67,7 @@ const App = () => {
       {/* Barra de navegação */}
       <NavBar cart={cart} total={getTotal()} />
       <Category />
-      <Pagina4 />
+      <Pagina4 addToCart={addToCart}/>
     </div>
   );
 
