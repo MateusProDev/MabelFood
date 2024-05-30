@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import "./NavBar.css"; // Certifique-se de importar o arquivo de estilos
 
 const NavBar = ({ cart, total }) => {
@@ -23,11 +24,12 @@ const NavBar = ({ cart, total }) => {
     const whatsappUrl = `https://api.whatsapp.com/send?phone=5585991470709&text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, "_blank");
   };
+  const navigate = useNavigate();
 
   return (
     <nav className={`navbar ${isMenuOpen ? "open" : ""}`}>
       <div className="logo-container">
-        <img src="./img/Logo.png" alt="Logo" className="logo" />
+        <img src="./img/Logo.png" alt="Logo" className="logo" onClick={() => navigate('/')}/>
       </div>
       <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
         <li>
