@@ -4,31 +4,24 @@ import "./pagina1.css";
 const products = [
   {
     id: 1,
-    name: "Pizza de Pepperoni",
+    name: "Dogão 4 queijos",
     content: "Entrega Grátis",
     price: 34.99,
-    imgSrc: "/img/pepperoni.jpg",
+    imgSrc: "/img/dog2.jpg",
   },
   {
     id: 2,
-    name: "Pizza Margherita",
+    name: "Dogão tradicional",
     content: "Entrega Grátis",
     price: 29.99,
-    imgSrc: "/img/marg.jpg",
+    imgSrc: "/img/dog3.jpg",
   },
   {
     id: 3,
-    name: "Hambúrguer X Tudo",
+    name: "Hot'Tudo",
     content: "Entrega Grátis",
     price: 12.99,
-    imgSrc: "/img/burguer.jpg",
-  },
-  {
-    id: 4,
-    name: "Pizza Vegetariana",
-    content: "Entrega Grátis",
-    price: 32.99,
-    imgSrc: "/img/vege.jpg",
+    imgSrc: "/img/dog1.jpg",
   },
 ];
 
