@@ -4,21 +4,21 @@ import "./pagina1.css";
 const products = [
   {
     id: 1,
-    name: "Pizza de Pepperoni",
+    name: "Burguer Premium",
     content: "Entrega Grátis",
     price: 34.99,
-    imgSrc: "/img/pepperoni.jpg",
+    imgSrc: "/img/BurguerPremium.jpg",
   },
   {
     id: 2,
-    name: "Pizza Margherita",
+    name: "Burguer Frango",
     content: "Entrega Grátis",
     price: 29.99,
-    imgSrc: "/img/marg.jpg",
+    imgSrc: "/img/BurguerFrango.jpg",
   },
   {
     id: 3,
-    name: "Hambúrguer X Tudo",
+    name: "Burguer Mac",
     content: "Entrega Grátis",
     price: 12.99,
     imgSrc: "/img/burguer.jpg",
@@ -28,7 +28,7 @@ const products = [
     name: "Pizza Vegetariana",
     content: "Entrega Grátis",
     price: 32.99,
-    imgSrc: "/img/vege.jpg",
+    imgSrc: "/img/BurguerMaster.jpg",
   },
 ];
 
