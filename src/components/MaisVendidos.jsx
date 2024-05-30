@@ -11,17 +11,17 @@ const products = [
   },
   {
     id: 2,
-    name: "Pizza Margherita",
+    name: "Burguer Mac", 
     content: "Entrega Grátis",
     price: 29.99,
-    imgSrc: "/img/marg.jpg",
+    imgSrc: "/img/burguer.jpg",
   },
   {
     id: 3,
-    name: "Hambúrguer X Tudo",
+    name: "Pizza Margherita",
     content: "Entrega Grátis",
     price: 12.99,
-    imgSrc: "/img/burguer.jpg",
+    imgSrc: "/img/marg.jpg",
   },
   {
     id: 4,
