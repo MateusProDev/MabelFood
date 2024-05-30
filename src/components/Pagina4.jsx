@@ -28,7 +28,7 @@ const products = [
     name: "Vitamina de morango",
     content: "Entrega Grátis",
     price: 32.99,
-    imgSrc: "/img/vege.jpg",
+    imgSrc: "/img/morango.jpg",
   },
   {
     id: 5,
