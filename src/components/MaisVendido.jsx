@@ -1,5 +1,5 @@
 import React from "react";
-import "./MaisVendidos.css";
+import "./MaisVendido.css";
 import { Link } from 'react-router-dom';
 
 const products = [
@@ -33,13 +33,13 @@ const products = [
   },
 ];
 
-const MaisVendidos = ({ addToCart }) => {
+const MaisVendido = ({ addToCart }) => {
   return (
     <div className="containerFlexMais">
       <div className="flexMais">
         <div className="seeHome">
-          <h1>Os mais vendidos</h1>
-          <Link to="/allProducts">
+          <h1>Mais vendidos</h1>
+          <Link to="/MaisVendidos">
             <h4>Ver Todos</h4>
           </Link>
         </div>
@@ -74,4 +74,4 @@ const MaisVendidos = ({ addToCart }) => {
   );
 };
 
-export default MaisVendidos;
+export default MaisVendido;

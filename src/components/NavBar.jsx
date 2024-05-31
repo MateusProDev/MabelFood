@@ -48,7 +48,7 @@ const NavBar = ({ cart, total }) => {
           <Link to="/bebidas">Bebidas</Link>
         </li>
         <li>
-          <Link to="/allProducts">Mais vendidos</Link>
+          <Link to="/MaisVendidos">+Vendidos</Link>
         </li>
       </ul>
       <div className="boxCar" onClick={handleCartToggle}>

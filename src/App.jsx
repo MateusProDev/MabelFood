@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Slick from "./components/Slick";
 import Category from "./components/Category";
-import MaisVendidos from "./components/MaisVendidos";
+import MaisVendido from "./components/MaisVendido";
 import Pagina1 from "./components/Pagina1";
 import Pagina2 from "./components/Pagina2";
 import Pagina3 from "./components/Pagina3";
 import Pagina4 from "./components/Pagina4";
+import Pagina5 from "./components/Pagina5";
 
 
 // Componente principal da aplicação
@@ -32,7 +33,7 @@ const App = () => {
       {/* Banners*/}
       <Slick />
       {/* Os mais pedidos */}
-      <MaisVendidos addToCart={addToCart} />
+      <MaisVendido addToCart={addToCart} />
     </div>
   );
 
@@ -70,12 +71,12 @@ const App = () => {
       <Pagina4 addToCart={addToCart}/>
     </div>
   );
-  const AllProducts = () => (
+  const MaisVendidos = () => (
     <div>
       {/* Barra de navegação */}
       <NavBar cart={cart} total={getTotal()} />
       <Category />
-      <Pagina4 addToCart={addToCart}/>
+      <Pagina5 addToCart={addToCart}/>
     </div>
   );
 
@@ -89,7 +90,7 @@ const App = () => {
           <Route path="/Burguers" element={<Burguers />} />
           <Route path="/HotDogs" element={<HotDogs />} />
           <Route path="/Bebidas" element={<Bebidas />} />
-          <Route path="/AllProducts" element={<AllProducts />} />
+          <Route path="/MaisVendidos" element={<MaisVendidos />} />
         </Routes>
       </div>
     </Router>
