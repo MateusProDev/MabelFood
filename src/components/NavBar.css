@@ -40,14 +40,13 @@ body {
   width: 115px;
   overflow: hidden;
 }
-/* Estiliza o primeiro item da lista */
+
 .navbar li:first-child {
   color: #8c0000 !important;
   font-weight: bold;
   margin: 0 -10px;
 }
 
-/* Estiliza o segundo item da lista */
 .navbar li:nth-child(2) {
   font-style: italic;
   margin: 0 -10px;
@@ -69,7 +68,6 @@ body {
   transform: scale(1.1);
   color: #8c0000;
 }
-
 
 .nav-links-mobile {
   display: none;
@@ -120,6 +118,32 @@ body {
   transform: scale(1.1);
 }
 
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.remove-item {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.remove-item:hover {
+  background-color: #cc0000;
+}
+#removerCar{
+  background-color: #f29d38;
+  color: #fff;
+  border: none;
+  padding: 2px 5px;
+}
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .menu-icon {
@@ -181,9 +205,10 @@ body {
 }
 
 /* Estilos específicos para o carrinho */
-.boxCar{
+.boxCar {
   margin-right: 40px;
 }
+
 .carinho_compras {
   background-color: #ffffff;
   margin: 0;
@@ -221,24 +246,27 @@ body {
 .total-carrinho strong {
   font-weight: bold;
 }
-#titleCar{
+
+#titleCar {
   margin-top: -10px;
   font-size: 22px;
   color: #333;
 }
-.priceCar{
+
+.priceCar {
   font-size: 20px;
   padding: 10px;
 }
-.btnCar{
+
+.btnCar {
   padding: 7px 10px;
   border: none;
   background-color: #f29d38;
   color: #f9f9f9;
   border-radius: 5px;
 }
-.btnCar:hover{
+
+.btnCar:hover {
   transform: scale(1.05);
   background-color: #8c0000;
-  
 }

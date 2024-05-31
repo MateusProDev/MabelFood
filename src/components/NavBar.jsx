@@ -2,27 +2,27 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SocialMedia from "./SocialMedias";
 import { useNavigate } from "react-router-dom";
-import "./NavBar.css"; // Certifique-se de importar o arquivo de estilos
+import "./NavBar.css";
 
-const NavBar = ({ cart, total }) => {
+const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isCartOpen, setCartOpen] = useState(false);
 
   const handleMenuToggle = () => {
     setMenuOpen(!isMenuOpen);
-    setCartOpen(false); // Fecha o carrinho quando o menu é aberto
+    setCartOpen(false);
   };
 
   const handleCartToggle = () => {
     setCartOpen(!isCartOpen);
-    setMenuOpen(false); // Fecha o menu quando o carrinho é aberto
+    setMenuOpen(false);
   };
 
   const handleFinalizePurchase = () => {
     const message = cart
       .map((item) => `${item.name} - R$${item.price.toFixed(2)}`)
       .join("\n");
-    const totalValue = Number(total).toFixed(2); // Corrigido para garantir que total seja um número
+    const totalValue = Number(total).toFixed(2);
     const whatsappMessage = `Desejo concluir meu pedido:\n\n${message}\n\nTotal: R$${totalValue}\n\nPreencha as informações:\n\nNome:\nEndereço:\nForma de pagamento:\nPix, Debito, Credito`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=5585991470709&text=${encodeURIComponent(
       whatsappMessage
@@ -78,6 +78,8 @@ const NavBar = ({ cart, total }) => {
                 <span className="priceCar">
                   {item.name} - R${item.price.toFixed(2)}
                 </span>
+                <button id="removerCar" onClick={() => removeFromCart(index)}>X</button>
+                <hr />
               </div>
             ))
           )}

@@ -18,7 +18,7 @@ const products = [
   },
   {
     id: 3,
-    name: "Pizza de chocolate",
+    name: "Pizza de Chocolate",
     content: "Entrega Grátis",
     price: 36.99,
     imgSrc: "/img/pizzadoce.jpg",
@@ -39,9 +39,9 @@ const Pagina1 = ({ addToCart }) => {
         <h1>PIZZAS</h1>
         <p>Conheça os sabores das nossas Pizzas</p>
       </div>
-      <div className="container"> {/* Adiciona a classe container aqui */}
+      <div className="container">
         {products.map((product) => (
-          <section key={product.id} className="produto"> {/* Mantém a classe produto aqui */}
+          <section key={product.id} className="produto">
             <h2>{product.name}</h2>
             <div>
               <img src={product.imgSrc} alt={product.name} />

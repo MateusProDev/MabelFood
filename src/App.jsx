@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Slick from "./components/Slick";
@@ -10,80 +10,81 @@ import Pagina3 from "./components/Pagina3";
 import Pagina4 from "./components/Pagina4";
 import Pagina5 from "./components/Pagina5";
 
-
 // Componente principal da aplicação
 const App = () => {
-  // lógica do carrinho
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const addToCart = (product) => {
-    setCart([...cart, product]);
+    setCart((prevCart) => [...prevCart, product]);
+  };
+
+  const removeFromCart = (indexToRemove) => {
+    setCart((prevCart) => prevCart.filter((item, index) => index !== indexToRemove));
   };
 
   const getTotal = () => {
     return cart.reduce((total, item) => total + item.price, 0).toFixed(2);
   };
-  // Componentes para diferentes rotas
+
   const Home = () => (
     <div>
-      {/* Barra de navegação */}
-      <NavBar cart={cart} total={getTotal()} />
-      {/* Categorias */}
+      <NavBar cart={cart} total={getTotal()} addToCart={addToCart} removeFromCart={removeFromCart} />
       <Category />
-      {/* Banners*/}
       <Slick />
-      {/* Os mais pedidos */}
       <MaisVendido addToCart={addToCart} />
     </div>
   );
 
   const Pizzas = () => (
     <div>
-      {/* Barra de navegação */}
-      <NavBar cart={cart} total={getTotal()} />
+      <NavBar cart={cart} total={getTotal()} addToCart={addToCart} removeFromCart={removeFromCart} />
       <Category />
-      <Pagina1 addToCart={addToCart}/>
+      <Pagina1 addToCart={addToCart} />
     </div>
   );
 
   const Burguers = () => (
     <div>
-      {/* Barra de navegação */}
-      <NavBar cart={cart} total={getTotal()} />
+      <NavBar cart={cart} total={getTotal()} addToCart={addToCart} removeFromCart={removeFromCart} />
       <Category />
-      <Pagina2 addToCart={addToCart}/>
+      <Pagina2 addToCart={addToCart} />
     </div>
   );
 
   const HotDogs = () => (
     <div>
-      {/* Barra de navegação */}
-      <NavBar cart={cart} total={getTotal()} />
+      <NavBar cart={cart} total={getTotal()} addToCart={addToCart} removeFromCart={removeFromCart} />
       <Category />
-      <Pagina3 addToCart={addToCart}/>
+      <Pagina3 addToCart={addToCart} />
     </div>
   );
+
   const Bebidas = () => (
     <div>
-      {/* Barra de navegação */}
-      <NavBar cart={cart} total={getTotal()} />
+      <NavBar cart={cart} total={getTotal()} addToCart={addToCart} removeFromCart={removeFromCart} />
       <Category />
-      <Pagina4 addToCart={addToCart}/>
+      <Pagina4 addToCart={addToCart} />
     </div>
   );
+
   const MaisVendidos = () => (
     <div>
-      {/* Barra de navegação */}
-      <NavBar cart={cart} total={getTotal()} />
+      <NavBar cart={cart} total={getTotal()} addToCart={addToCart} removeFromCart={removeFromCart} />
       <Category />
-      <Pagina5 addToCart={addToCart}/>
+      <Pagina5 addToCart={addToCart} />
     </div>
   );
 
   return (
     <Router>
       <div className="mainConteudo">
-        {/* Definição de rotas */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Pizzas" element={<Pizzas />} />
