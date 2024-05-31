@@ -1,5 +1,6 @@
 import React from "react";
 import "./MaisVendidos.css";
+import { Link } from 'react-router-dom';
 
 const products = [
   {
@@ -11,7 +12,7 @@ const products = [
   },
   {
     id: 2,
-    name: "Burguer Mac", 
+    name: "Burguer Mac",
     content: "Entrega Grátis",
     price: 29.99,
     imgSrc: "/img/burguer.jpg",
@@ -36,28 +37,38 @@ const MaisVendidos = ({ addToCart }) => {
   return (
     <div className="containerFlexMais">
       <div className="flexMais">
-      <div className="seeHome">
-        <h1>Os mais vendidos</h1>
-        <h4>Ver Todos</h4>
-      </div>
-      <div className="container"> {/* Adiciona a classe container aqui */}
-        {products.map((product) => (
-          <section key={product.id} className="produto"> {/* Mantém a classe produto aqui */}
-            <h2>{product.name}</h2>
-            <div>
-              <img src={product.imgSrc} alt={product.name} />
-              <br />
-              <strong>{product.content}</strong>
-              <div className="box-value">
-                <span>R${product.price.toFixed(2)}</span>
-                <button className="btn" type="button" onClick={() => addToCart(product)}>
-                  Adicionar a sacola
-                </button>
+        <div className="seeHome">
+          <h1>Os mais vendidos</h1>
+          <Link to="/allProducts">
+            <h4>Ver Todos</h4>
+          </Link>
+        </div>
+        <div className="container">
+          {" "}
+          {/* Adiciona a classe container aqui */}
+          {products.map((product) => (
+            <section key={product.id} className="produto">
+              {" "}
+              {/* Mantém a classe produto aqui */}
+              <h2>{product.name}</h2>
+              <div>
+                <img src={product.imgSrc} alt={product.name} />
+                <br />
+                <strong>{product.content}</strong>
+                <div className="box-value">
+                  <span>R${product.price.toFixed(2)}</span>
+                  <button
+                    className="btn"
+                    type="button"
+                    onClick={() => addToCart(product)}
+                  >
+                    Adicionar a sacola
+                  </button>
+                </div>
               </div>
-            </div>
-          </section>
-        ))}
-      </div>
+            </section>
+          ))}
+        </div>
       </div>
     </div>
   );

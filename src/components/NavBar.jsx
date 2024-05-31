@@ -47,6 +47,9 @@ const NavBar = ({ cart, total }) => {
         <li>
           <Link to="/bebidas">Bebidas</Link>
         </li>
+        <li>
+          <Link to="/allProducts">Mais vendidos</Link>
+        </li>
       </ul>
       <div className="boxCar" onClick={handleCartToggle}>
         <img src="./img/ShoppingBag.png" alt="Cart" className="cart-icon" />

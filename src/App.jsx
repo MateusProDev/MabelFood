@@ -70,6 +70,14 @@ const App = () => {
       <Pagina4 addToCart={addToCart}/>
     </div>
   );
+  const AllProducts = () => (
+    <div>
+      {/* Barra de navegação */}
+      <NavBar cart={cart} total={getTotal()} />
+      <Category />
+      <Pagina4 addToCart={addToCart}/>
+    </div>
+  );
 
   return (
     <Router>
@@ -81,6 +89,7 @@ const App = () => {
           <Route path="/Burguers" element={<Burguers />} />
           <Route path="/HotDogs" element={<HotDogs />} />
           <Route path="/Bebidas" element={<Bebidas />} />
+          <Route path="/AllProducts" element={<AllProducts />} />
         </Routes>
       </div>
     </Router>
