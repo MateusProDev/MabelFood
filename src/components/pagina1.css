@@ -78,6 +78,19 @@
   font-size: 18px;
   color: #8c0000c0;
 }
+.notification {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #c10000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
 
 /* Estilos responsivos */
 @media (max-width: 469px) {
@@ -96,10 +109,14 @@
     object-fit: cover; /* Para garantir que a imagem mantenha sua proporção */
     margin-right: 20px;
   }
+
+  
 }
 
 @media (min-width: 469px) and (max-width: 1024px) {
   /* Ajustes específicos para tablets */
+
+  
 }
 
 @media (min-width: 1025px) {
@@ -109,4 +126,6 @@
   .pagina1-container .flexMais {
     margin: auto;
   }
+
+  
 }

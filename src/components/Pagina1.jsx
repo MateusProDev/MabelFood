@@ -1,5 +1,5 @@
 import React from 'react';
-import "./pagina1.css";
+import './pagina1.css';
 
 const products = [
   {
@@ -33,6 +33,10 @@ const products = [
 ];
 
 const Pagina1 = ({ addToCart }) => {
+  const handleAddToCart = (product) => {
+    addToCart(product);
+  };
+
   return (
     <div className="pagina1-container">
       <div className="seeHome">
@@ -49,7 +53,7 @@ const Pagina1 = ({ addToCart }) => {
               <strong>{product.content}</strong>
               <div className="box-value">
                 <span>R${product.price.toFixed(2)}</span>
-                <button className="btn" type="button" onClick={() => addToCart(product)}>
+                <button className="btn" type="button" onClick={() => handleAddToCart(product)}>
                   Adicionar a sacola
                 </button>
               </div>
