@@ -68,10 +68,10 @@ const NavBar = ({ cart, total }) => {
         <img src="./img/ShoppingBag.png" alt="Cart" className="cart-icon" />
       </div>
       <section className={`carinho_compras ${isCartOpen ? "open" : ""}`}>
-        <h2 id="titleCar">Carrinho</h2>
+        <h2 id="titleCar">Sacola</h2>
         <div className="carrinho-itens" id="carrinho-tbody">
           {cart.length === 0 ? (
-            <p className="priceCar">Seu carrinho está vazio</p>
+            <p className="priceCar">Sua sacola está vazia</p>
           ) : (
             cart.map((item, index) => (
               <div key={index}>
