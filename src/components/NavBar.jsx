@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+import SocialMedia from "./SocialMedias";
+import { useNavigate } from "react-router-dom";
 import "./NavBar.css"; // Certifique-se de importar o arquivo de estilos
 
 const NavBar = ({ cart, total }) => {
@@ -18,10 +19,14 @@ const NavBar = ({ cart, total }) => {
   };
 
   const handleFinalizePurchase = () => {
-    const message = cart.map(item => `${item.name} - R$${item.price.toFixed(2)}`).join("\n");
+    const message = cart
+      .map((item) => `${item.name} - R$${item.price.toFixed(2)}`)
+      .join("\n");
     const totalValue = Number(total).toFixed(2); // Corrigido para garantir que total seja um número
     const whatsappMessage = `Desejo concluir meu pedido:\n\n${message}\n\nTotal: R$${totalValue}\n\nPreencha as informações:\n\nNome:\nEndereço:\nForma de pagamento:\nPix, Debito, Credito`;
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=5585991470709&text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=5585991470709&text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
     window.open(whatsappUrl, "_blank");
   };
   const navigate = useNavigate();
@@ -29,7 +34,12 @@ const NavBar = ({ cart, total }) => {
   return (
     <nav className={`navbar ${isMenuOpen ? "open" : ""}`}>
       <div className="logo-container">
-        <img src="./img/Logo.png" alt="Logo" className="logo" onClick={() => navigate('/')}/>
+        <img
+          src="./img/Logo.png"
+          alt="Logo"
+          className="logo"
+          onClick={() => navigate("/")}
+        />
       </div>
       <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
         <li>
@@ -50,6 +60,9 @@ const NavBar = ({ cart, total }) => {
         <li>
           <Link to="/MaisVendidos">+Vendidos</Link>
         </li>
+        <div>
+          <SocialMedia />
+        </div>
       </ul>
       <div className="boxCar" onClick={handleCartToggle}>
         <img src="./img/ShoppingBag.png" alt="Cart" className="cart-icon" />
@@ -73,7 +86,11 @@ const NavBar = ({ cart, total }) => {
           <strong>Total:</strong>
           <span id="total-carrinho">{" R$" + Number(total).toFixed(2)}</span>
         </div>
-        <button className="btnCar" type="button" onClick={handleFinalizePurchase}>
+        <button
+          className="btnCar"
+          type="button"
+          onClick={handleFinalizePurchase}
+        >
           Finalizar Compra
         </button>
       </section>

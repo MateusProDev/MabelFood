@@ -1,0 +1,41 @@
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 25px 20px 20px 20px;
+  margin-left: 120px;
+}
+
+.icon {
+  color: #555;
+  font-size: 2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.icon:hover {
+  color: #f29d38;
+  transform: scale(1.1);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .social-media {
+    gap: 15px;
+    margin-left: -270px;
+    width: auto;
+  }
+  .icon {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-media {
+    gap: 10px 15px;
+    width: auto;
+    margin-left: -270px;
+  }
+  .icon {
+    font-size: 1.5rem;
+  }
+}
