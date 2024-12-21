@@ -81,8 +81,8 @@
 
 /* Estilo para o select de sabores */
 .pagina1-container .select-flavor {
-  margin-top: 10px;
-  padding: 5px;
+  margin: 5px 5px;
+  padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
