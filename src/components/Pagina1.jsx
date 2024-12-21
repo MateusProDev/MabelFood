@@ -8,7 +8,7 @@ const products = [
     content: "Entregamos para sua região",
     descrition: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
     price: 39.99,
-    imgSrc: "/img/pepperoni.jpg",
+    imgSrc: "/img/frangoca.jpg",
   },
   {
     id: 2,
