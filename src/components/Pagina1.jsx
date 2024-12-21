@@ -4,30 +4,34 @@ import "./pagina1.css";
 const products = [
   {
     id: 1,
-    name: "Pizza de Pepperoni",
+    name: "Pizza de Frango C/Catupiry",
     content: "Entregamos para sua região",
-    price: 34.99,
+    descrition: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
+    price: 39.99,
     imgSrc: "/img/pepperoni.jpg",
   },
   {
     id: 2,
     name: "Pizza Margherita",
     content: "Entregamos para sua região",
-    price: 29.99,
+    descrition: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
+    price: 39.99,
     imgSrc: "/img/marg.jpg",
   },
   {
     id: 3,
     name: "Pizza de Chocolate",
     content: "Entregamos para sua região",
-    price: 36.99,
+    descrition: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
+    price: 39.99,
     imgSrc: "/img/pizzadoce.jpg",
   },
   {
     id: 4,
-    name: "Pizza Vegetariana",
+    name: "Pizza de Carne do sol",
     content: "Entregamos para sua região",
-    price: 32.99,
+    descrition: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
+    price: 46.99,
     imgSrc: "/img/vege.jpg",
   },
 ];
@@ -65,7 +69,8 @@ const Pagina1 = ({ addToCart }) => {
             <div>
               <img src={product.imgSrc} alt={product.name} />
               <br />
-              <strong>{product.content}</strong>
+              <strong>{product.content}</strong> <br />
+              <p  className="descri">{product.descrition}</p>
               <div className="box-value">
                 <span>R${product.price.toFixed(2)}</span>
                 {/* Campo para escolher o segundo sabor */}
