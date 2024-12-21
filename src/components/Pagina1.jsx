@@ -1,40 +1,55 @@
-import React from 'react';
-import './pagina1.css';
+import React, { useState } from "react";
+import "./pagina1.css";
 
 const products = [
   {
     id: 1,
     name: "Pizza de Pepperoni",
-    content: "Entrega Grátis",
+    content: "Entregamos para sua região",
     price: 34.99,
     imgSrc: "/img/pepperoni.jpg",
   },
   {
     id: 2,
     name: "Pizza Margherita",
-    content: "Entrega Grátis",
+    content: "Entregamos para sua região",
     price: 29.99,
     imgSrc: "/img/marg.jpg",
   },
   {
     id: 3,
     name: "Pizza de Chocolate",
-    content: "Entrega Grátis",
+    content: "Entregamos para sua região",
     price: 36.99,
     imgSrc: "/img/pizzadoce.jpg",
   },
   {
     id: 4,
     name: "Pizza Vegetariana",
-    content: "Entrega Grátis",
+    content: "Entregamos para sua região",
     price: 32.99,
     imgSrc: "/img/vege.jpg",
   },
 ];
 
 const Pagina1 = ({ addToCart }) => {
-  const handleAddToCart = (product) => {
-    addToCart(product);
+  const [secondFlavor, setSecondFlavor] = useState(""); // Estado para o segundo sabor
+  const [notification, setNotification] = useState(""); // Estado para exibir a notificação
+
+  const handleAddToCart = (product, secondFlavor) => {
+    let productName = product.name;
+    if (secondFlavor) {
+      productName = `${product.name} - Metade ${secondFlavor}`; // Corrigido para mostrar apenas o segundo sabor
+    }
+    addToCart({ ...product, name: productName });
+
+    // Exibe a notificação
+    setNotification("Item adicionado à sacola!");
+
+    // Fecha a notificação após 3 segundos
+    setTimeout(() => {
+      setNotification(""); // Limpa a notificação após 3 segundos
+    }, 3000);
   };
 
   return (
@@ -53,7 +68,28 @@ const Pagina1 = ({ addToCart }) => {
               <strong>{product.content}</strong>
               <div className="box-value">
                 <span>R${product.price.toFixed(2)}</span>
-                <button className="btn" type="button" onClick={() => handleAddToCart(product)}>
+                {/* Campo para escolher o segundo sabor */}
+                <select
+                  value={secondFlavor}
+                  onChange={(e) => setSecondFlavor(e.target.value)}
+                  className="select-flavor" // Estilo do select
+                >
+                  <option value="">Selecione o segundo sabor (opcional)</option>
+                  {products.map((item) =>
+                    item.name !== product.name ? (
+                      <option key={item.id} value={item.name}>
+                        {item.name}
+                      </option>
+                    ) : null
+                  )}
+                </select>
+                <button
+                  className="btn"
+                  type="button"
+                  onClick={() =>
+                    handleAddToCart(product, secondFlavor) // Passa o segundo sabor para a função
+                  }
+                >
                   Adicionar a sacola
                 </button>
               </div>
@@ -61,6 +97,9 @@ const Pagina1 = ({ addToCart }) => {
           </section>
         ))}
       </div>
+
+      {/* Notificação */}
+      {notification && <div className="notification">{notification}</div>}
     </div>
   );
 };

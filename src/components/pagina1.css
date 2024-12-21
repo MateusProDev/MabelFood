@@ -78,19 +78,41 @@
   font-size: 18px;
   color: #8c0000c0;
 }
-.notification {
-  position: absolute;
-  width: 200px;
-  height: 40px;
-  bottom: 20px;
-  right: 20px;
-  background-color: #333;
-  color: #c10000;
-  padding: 10px 20px;
+
+/* Estilo para o select de sabores */
+.pagina1-container .select-flavor {
+  margin-top: 10px;
+  padding: 5px;
   border-radius: 5px;
-  z-index: 9999;
+  border: 1px solid #ccc;
 }
 
+/* Estilo para a notificação centralizada */
+.notification {
+  position: fixed;
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta para que a notificação fique exatamente no centro */
+  background-color: #333;
+  color: #c10000;
+  padding: 20px 40px;
+  border-radius: 5px;
+  z-index: 9999; /* Garante que a notificação ficará acima de todos os outros elementos */
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  animation: fadeOut 3s forwards; /* Animação para desaparecer após 3 segundos */
+}
+
+/* Animação para desaparecer */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 /* Estilos responsivos */
 @media (max-width: 469px) {
@@ -109,23 +131,4 @@
     object-fit: cover; /* Para garantir que a imagem mantenha sua proporção */
     margin-right: 20px;
   }
-
-  
-}
-
-@media (min-width: 469px) and (max-width: 1024px) {
-  /* Ajustes específicos para tablets */
-
-  
-}
-
-@media (min-width: 1025px) {
-  .pagina1-container .containerFlexMais {
-    display: flex;
-  }
-  .pagina1-container .flexMais {
-    margin: auto;
-  }
-
-  
 }

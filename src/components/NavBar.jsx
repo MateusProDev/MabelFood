@@ -29,6 +29,7 @@ const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
     )}`;
     window.open(whatsappUrl, "_blank");
   };
+
   const navigate = useNavigate();
 
   return (
@@ -76,9 +77,11 @@ const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
             cart.map((item, index) => (
               <div key={index}>
                 <span className="priceCar">
-                  {item.name} - R${item.price.toFixed(2)}
+                  {item.name} - R${item.price.toFixed(2)} {/* Exibe os dois sabores */}
                 </span>
-                <button id="removerCar" onClick={() => removeFromCart(index)}>X</button>
+                <button id="removerCar" onClick={() => removeFromCart(index)}>
+                  X
+                </button>
                 <hr />
               </div>
             ))
