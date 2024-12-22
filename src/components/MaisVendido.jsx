@@ -7,7 +7,7 @@ const products = [
     id: 1,
     name: "Pizza de Pepperoni",
     content: "Entregamos para a sua região",
-    price: 34.99,
+    price: 39.99,
     imgSrc: "/img/pepperoni.jpg",
   },
   {
@@ -21,14 +21,14 @@ const products = [
     id: 3,
     name: "Pizza Margherita",
     content: "Entregamos para a sua região",
-    price: 12.99,
+    price: 39.99,
     imgSrc: "/img/marg.jpg",
   },
   {
     id: 4,
     name: "Pizza Vegetariana",
     content: "Entregamos para a sua região",
-    price: 32.99,
+    price: 39.99,
     imgSrc: "/img/vege.jpg",
   },
 ];
