@@ -1,0 +1,125 @@
+/* Página principal de Pizzas */
+.Pagina5 {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .seeHome {
+    display: block;
+    margin: -40px 0 5px 0;
+  }
+  
+  .seeHome h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .seeHome p {
+    font-size: 18px;
+    color: #d1401c;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    justify-content: center;
+    margin-top:-20px;
+  }
+  
+  .produto {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .produto:hover {
+    transform: translateY(-5px);
+  }
+  
+  .produto h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .produto img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .boxPg1 {
+    margin-top: 10px;
+  }
+  
+  .boxPg1 p {
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .boxPg1 .box-value {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  
+  .box-value span {
+    font-size: 22px;
+    color: #e44d26;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .select-flavor,
+  .select-crust {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  button.btn {
+    background-color: #e44d26;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  button.btn:hover {
+    background-color: #d1401c;
+  }
+  
+  .notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0;
+    animation: showNotification 3s forwards;
+  }
+  
+  @keyframes showNotification {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

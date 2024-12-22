@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from "react";
+import "./pagina5.css";
 
 const products = [
   {
     id: 1,
     name: "Pizza de Pepperoni",
     content: "Entrega Grátis",
+    description: "Massa fresca, Molho de tomate, Pepperoni, Queijo e Orégano",
     price: 34.99,
     imgSrc: "/img/pepperoni.jpg",
   },
@@ -12,6 +14,7 @@ const products = [
     id: 2,
     name: "Burguer Mac",
     content: "Entrega Grátis",
+    description: "Pão Brioche, Carne artesanal, Queijo, Presunto, Ovo, Alface e Tomate",
     price: 29.99,
     imgSrc: "/img/burguer.jpg",
   },
@@ -19,6 +22,7 @@ const products = [
     id: 3,
     name: "Pizza Margherita",
     content: "Entrega Grátis",
+    description: "Massa fresca, Molho de tomate, Queijo, Tomate, Orégano e Azeitona",
     price: 12.99,
     imgSrc: "/img/marg.jpg",
   },
@@ -26,29 +30,99 @@ const products = [
     id: 4,
     name: "Pizza Vegetariana",
     content: "Entrega Grátis",
+    description: "Massa fresca, Molho de tomate, Legumes frescos, Queijo e Orégano",
     price: 32.99,
     imgSrc: "/img/vege.jpg",
   },
 ];
 
+const crustPrices = {
+  "Borda Cheddar": 0.0,
+  "Borda Catupiry": 0.0,
+  "Borda Chocolate": 3.0,
+};
+
 const Pagina5 = ({ addToCart }) => {
+  const [secondFlavor, setSecondFlavor] = useState("");
+  const [selectedCrust, setSelectedCrust] = useState("");
+  const [notification, setNotification] = useState("");
+
+  const handleAddToCart = (product, secondFlavor, selectedCrust) => {
+    let productName = product.name;
+    let finalPrice = product.price;
+
+    // Ajuste o nome do produto com o segundo sabor, se houver
+    if (secondFlavor) {
+      productName = `${product.name} - Metade ${secondFlavor}`;
+    }
+
+    // Adiciona o valor da borda ao preço final
+    if (selectedCrust) {
+      finalPrice += crustPrices[selectedCrust];
+      productName += ` - ${selectedCrust}`;
+    }
+
+    // Adiciona o produto ao carrinho
+    addToCart({ ...product, name: productName, price: finalPrice });
+
+    // Exibe a notificação
+    setNotification("Item adicionado à sacola!");
+    setTimeout(() => {
+      setNotification("");
+    }, 3000);
+  };
+
   return (
-    <div className="pagina1-container">
+    <div className="maisVendido-container">
       <div className="seeHome">
         <h1>Mais Vendidos</h1>
-        <p>Conheça os sabores das nossas Pizzas</p>
+        <p>Conheça os produtos mais vendidos</p>
       </div>
-      <div className="container"> {/* Adiciona a classe container aqui */}
+      <div className="container">
         {products.map((product) => (
-          <section key={product.id} className="produto"> {/* Mantém a classe produto aqui */}
+          <section key={product.id} className="produto">
             <h2>{product.name}</h2>
-            <div>
+            <div className="boxPg1">
               <img src={product.imgSrc} alt={product.name} />
               <br />
               <strong>{product.content}</strong>
+              <p>{product.description}</p>
               <div className="box-value">
                 <span>R${product.price.toFixed(2)}</span>
-                <button className="btn" type="button" onClick={() => addToCart(product)}>
+
+                {/* Seleção de segundo sabor */}
+                <select
+                  value={secondFlavor}
+                  onChange={(e) => setSecondFlavor(e.target.value)}
+                  className="select-flavor"
+                >
+                  <option value="">Selecione o segundo sabor (opcional)</option>
+                  {products.map((item) =>
+                    item.name !== product.name ? (
+                      <option key={item.id} value={item.name}>
+                        {item.name}
+                      </option>
+                    ) : null
+                  )}
+                </select>
+
+                {/* Seleção de borda */}
+                <select
+                  value={selectedCrust}
+                  onChange={(e) => setSelectedCrust(e.target.value)}
+                  className="select-crust"
+                >
+                  <option value="">Escolha a borda (opcional)</option>
+                  <option value="Borda Cheddar">Borda Cheddar - R$ 0,00</option>
+                  <option value="Borda Catupiry">Borda Catupiry - R$ 0,00</option>
+                  <option value="Borda Chocolate">Borda Chocolate - R$ 3,00</option>
+                </select>
+
+                <button
+                  className="btn"
+                  type="button"
+                  onClick={() => handleAddToCart(product, secondFlavor, selectedCrust)}
+                >
                   Adicionar a sacola
                 </button>
               </div>
@@ -56,6 +130,9 @@ const Pagina5 = ({ addToCart }) => {
           </section>
         ))}
       </div>
+
+      {/* Notificação */}
+      {notification && <div className="notification">{notification}</div>}
     </div>
   );
 };

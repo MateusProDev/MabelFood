@@ -1,6 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Importa o hook de navegação
 import "./MaisVendido.css";
-import { Link } from 'react-router-dom';
 
 const products = [
   {
@@ -10,7 +10,7 @@ const products = [
     description: "Massa fresca, Molho de tomate,<br />Frango, Queijo, Orégano e Azeitona",
     price: 39.99,
     imgSrc: "/img/frangoca.jpg",
-  }, 
+  },
   {
     id: 2,
     name: "Burguer Mac",
@@ -38,38 +38,37 @@ const products = [
 ];
 
 const MaisVendido = ({ addToCart }) => {
+  const navigate = useNavigate(); // Inicializa o hook de navegação
+
   return (
     <div className="containerFlexMais">
       <div className="flexMais">
         <div className="seeHome">
           <h1>Mais vendidos</h1>
-          <Link to="/MaisVendidos">
-            <h4>Ver Todos</h4>
-          </Link>
+          <h4 onClick={() => navigate("/MaisVendidos")}>Ver Todos</h4>
         </div>
         <div className="container">
-          {" "}
-          {/* Adiciona a classe container aqui */}
           {products.map((product) => (
             <section key={product.id} className="produto">
-              {" "}
-              {/* Mantém a classe produto aqui */}
               <h2>{product.name}</h2>
               <div className="maisVendidos">
                 <img src={product.imgSrc} alt={product.name} />
                 <br />
                 <strong>{product.content}</strong>
                 <div className="boxDesc">
-                <p dangerouslySetInnerHTML={{ __html: product.description }}></p>
+                  <p dangerouslySetInnerHTML={{ __html: product.description }}></p>
                 </div>
                 <div className="box-value">
                   <span>R${product.price.toFixed(2)}</span>
                   <button
                     className="btn"
                     type="button"
-                    onClick={() => addToCart(product)}
+                    onClick={() => {
+                      addToCart(product); // Adiciona ao carrinho
+                      navigate("/MaisVendidos"); // Redireciona para a página 5
+                    }}
                   >
-                    Adicionar a sacola
+                    Comprar Agora
                   </button>
                 </div>
               </div>
