@@ -73,12 +73,12 @@ const Pagina5 = ({ addToCart }) => {
   };
 
   return (
-    <div className="maisVendido-container">
-      <div className="seeHome">
+    <div className="pagina5-container">
+      <div className="pagina5-seeHome">
         <h1>Mais Vendidos</h1>
         <p>Conheça os produtos mais vendidos</p>
       </div>
-      <div className="container">
+      <div className="pagina5-container">
         {products.map((product) => (
           <section key={product.id} className="produto">
             <h2>{product.name}</h2>
