@@ -46,27 +46,44 @@ const Pagina5 = ({ addToCart }) => {
   const [secondFlavor, setSecondFlavor] = useState("");
   const [selectedCrust, setSelectedCrust] = useState("");
   const [notification, setNotification] = useState("");
+  const [selectedSize, setSelectedSize] = useState("");
+  const [currentPrices, setCurrentPrices] = useState(
+    products.reduce((acc, product) => ({ ...acc, [product.id]: product.price }), {})
+  );
 
-  const handleAddToCart = (product, secondFlavor, selectedCrust) => {
-    let productName = product.name;
-    let finalPrice = product.price;
+  const handleSizeChange = (productId, size) => {
+    setSelectedSize(size);
 
-    // Ajuste o nome do produto com o segundo sabor, se houver
-    if (secondFlavor) {
-      productName = `${product.name} - Metade ${secondFlavor}`;
+    // Atualiza o preço com base no tamanho
+    const updatedPrices = { ...currentPrices };
+    if (size === "Média") {
+      updatedPrices[productId] = 21.99;
+    } else if (size === "Grande") {
+      updatedPrices[productId] = products.find((p) => p.id === productId).price;
+    }
+    setCurrentPrices(updatedPrices);
+
+    // Reseta o segundo sabor ao mudar o tamanho
+    setSecondFlavor("");
+  };
+
+  const handleAddToCart = (product, secondFlavor, selectedCrust, selectedSize) => {
+    let productName = `${product.name} (${selectedSize})`;
+    let finalPrice = currentPrices[product.id];
+
+    if (selectedSize === "Grande" && secondFlavor) {
+      productName += ` - Metade ${secondFlavor}`;
     }
 
-    // Adiciona o valor da borda ao preço final
     if (selectedCrust) {
       finalPrice += crustPrices[selectedCrust];
       productName += ` - ${selectedCrust}`;
     }
 
-    // Adiciona o produto ao carrinho
     addToCart({ ...product, name: productName, price: finalPrice });
 
-    // Exibe a notificação
     setNotification("Item adicionado à sacola!");
+
     setTimeout(() => {
       setNotification("");
     }, 3000);
@@ -88,25 +105,36 @@ const Pagina5 = ({ addToCart }) => {
               <strong>{product.content}</strong>
               <p>{product.description}</p>
               <div className="box-value">
-                <span>R${product.price.toFixed(2)}</span>
+                <span>R${currentPrices[product.id].toFixed(2)}</span>
 
-                {/* Seleção de segundo sabor */}
+                {/* Seleção de tamanho */}
                 <select
-                  value={secondFlavor}
-                  onChange={(e) => setSecondFlavor(e.target.value)}
-                  className="select-flavor"
+                  value={selectedSize}
+                  onChange={(e) => handleSizeChange(product.id, e.target.value)}
+                  className="select-size"
                 >
-                  <option value="">Selecione o segundo sabor (opcional)</option>
-                  {products.map((item) =>
-                    item.name !== product.name ? (
-                      <option key={item.id} value={item.name}>
-                        {item.name}
-                      </option>
-                    ) : null
-                  )}
+                  <option value="">Escolha o tamanho</option>
+                  <option value="Média">Média</option>
+                  <option value="Grande">Grande</option>
                 </select>
 
-                {/* Seleção de borda */}
+                {selectedSize === "Grande" && (
+                  <select
+                    value={secondFlavor}
+                    onChange={(e) => setSecondFlavor(e.target.value)}
+                    className="select-flavor"
+                  >
+                    <option value="">Selecione o segundo sabor (opcional)</option>
+                    {products.map((item) =>
+                      item.name !== product.name ? (
+                        <option key={item.id} value={item.name}>
+                          {item.name}
+                        </option>
+                      ) : null
+                    )}
+                  </select>
+                )}
+
                 <select
                   value={selectedCrust}
                   onChange={(e) => setSelectedCrust(e.target.value)}
@@ -121,7 +149,9 @@ const Pagina5 = ({ addToCart }) => {
                 <button
                   className="btn"
                   type="button"
-                  onClick={() => handleAddToCart(product, secondFlavor, selectedCrust)}
+                  onClick={() =>
+                    handleAddToCart(product, secondFlavor, selectedCrust, selectedSize)
+                  }
                 >
                   Adicionar a sacola
                 </button>

@@ -3,28 +3,27 @@
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
+
 .pagina5-seeHome {
-    display: block;
-    margin: -40px 0 5px 0;
+    margin: -40px 0 20px 0;
 }
 
 .pagina5-seeHome h1 {
-    font-size: 28px;
-    padding: 0 10px;
+    font-size: 26px;
     color: #333;
     margin: 50px 0 -10px 0;
 }
 
 .pagina5-seeHome p {
     font-size: 18px;
-    padding: 0 10px;
     color: #d1401c;
 }
 
 .pagina5-container .produto {
     width: 95%;
+    max-width: 400px;
     background-color: white;
-    padding: 10px;
+    padding: 10px 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -66,16 +65,18 @@
     font-size: 22px;
     color: #555;
     font-weight: bold;
-    margin: 0px 0 0 5px
+    margin: -10px 0 0 0;
 }
 
+.pagina5-container .select-size,
 .pagina5-container .select-flavor,
 .pagina5-container .select-crust {
-    margin: 10px 0;
+    margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
     width: 100%;
+    font-size: 14px;
 }
 
 .pagina5-container button.btn {
@@ -104,6 +105,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     opacity: 0;
     animation: showNotification 3s forwards;
 }
@@ -111,8 +113,10 @@
 @keyframes showNotification {
     0% {
         opacity: 0;
+        transform: translateX(-50%) translateY(20px);
     }
     100% {
         opacity: 1;
+        transform: translateX(-50%) translateY(0);
     }
 }
