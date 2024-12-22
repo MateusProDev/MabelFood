@@ -16,7 +16,10 @@
   width: 200px; /* Define a largura fixa de cada item */
   margin-right: 20px; /* Adiciona um espaçamento entre os itens */
 }
-
+.maisVendidos p{
+  font-size: 18px;
+  color: #8c0000c0;
+}
 .produto img {
   width: 200px;
   height: 100px;

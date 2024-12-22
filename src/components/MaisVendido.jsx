@@ -53,7 +53,7 @@ const MaisVendido = ({ addToCart }) => {
               {" "}
               {/* Mantém a classe produto aqui */}
               <h2>{product.name}</h2>
-              <div>
+              <div className="maisVendidos">
                 <img src={product.imgSrc} alt={product.name} />
                 <br />
                 <strong>{product.content}</strong>
