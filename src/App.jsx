@@ -58,7 +58,7 @@ const App = () => {
     </div>
   );
 
-  const HotDogs = () => (
+  const Batatas = () => (
     <div>
       <NavBar cart={cart} total={getTotal()} addToCart={addToCart} removeFromCart={removeFromCart} />
       <Category />
@@ -89,7 +89,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/Pizzas" element={<Pizzas />} />
           <Route path="/Burguers" element={<Burguers />} />
-          <Route path="/HotDogs" element={<HotDogs />} />
+          <Route path="/Batatas" element={<Batatas />} />
           <Route path="/Bebidas" element={<Bebidas />} />
           <Route path="/MaisVendidos" element={<MaisVendidos />} />
         </Routes>

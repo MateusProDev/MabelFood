@@ -158,3 +158,19 @@
   border: 1px solid #ccc;
   width: 100%;
 }
+
+.complements {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.complement-item {
+  display: block;
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.complement-item input {
+  margin-right: 5px;
+}
