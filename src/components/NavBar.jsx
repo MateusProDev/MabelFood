@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SocialMedia from "./SocialMedias";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +7,7 @@ import "./NavBar.css";
 const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isCartOpen, setCartOpen] = useState(false);
+  const [cartItemCount, setCartItemCount] = useState(cart.length); // Contagem de itens no carrinho
 
   const handleMenuToggle = () => {
     setMenuOpen(!isMenuOpen);
@@ -31,6 +32,11 @@ const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
   };
 
   const navigate = useNavigate();
+
+  // Atualiza o contador de itens sempre que o cart mudar
+  useEffect(() => {
+    setCartItemCount(cart.length);
+  }, [cart]);
 
   return (
     <nav className={`navbar ${isMenuOpen ? "open" : ""}`}>
@@ -67,6 +73,8 @@ const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
       </ul>
       <div className="boxCar" onClick={handleCartToggle}>
         <img src="./img/ShoppingBag.png" alt="Cart" className="cart-icon" />
+        {/* Exibe o número de itens no carrinho */}
+        {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
       </div>
       <section className={`carinho_compras ${isCartOpen ? "open" : ""}`}>
         <h2 id="titleCar">Sacola</h2>
