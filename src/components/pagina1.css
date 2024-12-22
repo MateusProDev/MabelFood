@@ -174,3 +174,18 @@
 .complement-item input {
   margin-right: 5px;
 }
+
+.sizes {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.size-option {
+  display: block;
+  margin: 5px 0;
+}
+
+.size-option input {
+  margin-right: 5px;
+}
