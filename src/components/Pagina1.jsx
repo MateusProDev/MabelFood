@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./pagina1.css"; // Corrected the import statement for CSS
+import "./pagina1.css";
 
 const products = [
   {
@@ -14,7 +14,7 @@ const products = [
     id: 2,
     name: "Pizza Marguerita",
     content: "Entregamos para sua região",
-    description: "Massa fresca, Molho de tomate, Queijo, Tomate em rodelas, Orégano e Azeitona",
+    description: "Massa fresca, Molho de tomate, Queijo,Tomate em rodelas, Orégano e Azeitona",
     price: 39.99,
     imgSrc: "/img/marg.jpg",
   },
@@ -84,7 +84,7 @@ const products = [
   },
 ];
 
-const Pagina5 = ({ addToCart }) => {
+const Pagina1 = ({ addToCart }) => {
   const [secondFlavor, setSecondFlavor] = useState(""); // Estado para o segundo sabor
   const [selectedCrust, setSelectedCrust] = useState(""); // Estado para a borda
   const [notification, setNotification] = useState(""); // Estado para exibir a notificação
@@ -123,7 +123,7 @@ const Pagina5 = ({ addToCart }) => {
   };
 
   return (
-    <div className="Pagina5">
+    <div className="pagina1-container">
       <div className="seeHome">
         <h1>PIZZAS</h1>
         <p>Conheça os sabores das nossas Pizzas</p>
@@ -189,4 +189,4 @@ const Pagina5 = ({ addToCart }) => {
   );
 };
 
-export default Pagina5;
+export default Pagina1;
