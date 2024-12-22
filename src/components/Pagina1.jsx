@@ -84,7 +84,7 @@ const Pagina1 = ({ addToCart }) => {
         {products.map((product) => (
           <section key={product.id} className="produto">
             <h2>{product.name}</h2>
-            <div>
+            <div className="boxPg1">
               <img src={product.imgSrc} alt={product.name} />
               <br />
               <strong>{product.content}</strong>

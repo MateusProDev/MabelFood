@@ -12,8 +12,12 @@
   margin: -10px 0 -30px 0;
   align-items: center;
 }
+.boxPg1 p{
+  margin: -0px;
+}
 .descri {
   margin: 0;
+  font-size: 12x;
 }
 /* Estilo para o select de sabores */
 .pagina1-container .select-flavor,
