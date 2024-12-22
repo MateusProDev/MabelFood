@@ -15,11 +15,32 @@
   display: block; /* Torna os itens em blocos inline */
   width: 200px; /* Define a largura fixa de cada item */
   margin-right: 20px; /* Adiciona um espaçamento entre os itens */
+
 }
-.maisVendidos p{
-  font-size: 18px;
+.boxDesc {
+  width: 100%; /* Garante que ocupe todo o espaço disponível no contêiner pai */
+  max-width: 300px; /* Define um limite para a largura */
+  overflow-wrap: break-word; /* Quebra palavras longas */
+  word-wrap: break-word; /* Compatibilidade com navegadores antigos */
+  hyphens: auto; /* Hifenização automática */
+  margin: 0 auto; /* Centraliza dentro do contêiner pai */
+  text-align: justify; /* Justifica o texto */
+}
+
+.maisVendidos {
+  display: flex;
+  flex-direction: column; /* Garante que os elementos fiquem empilhados verticalmente */
+  align-items: flex-start; /* Alinha os itens ao início */
+}
+
+.maisVendidos p {
+  font-size: 12px;
   color: #8c0000c0;
+  margin: 0;
+  padding: 0;
 }
+
+
 .produto img {
   width: 200px;
   height: 100px;
