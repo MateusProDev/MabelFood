@@ -23,7 +23,7 @@ const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
       .map((item) => `${item.name} - R$${item.price.toFixed(2)}`)
       .join("\n");
     const totalValue = Number(total).toFixed(2);
-    const whatsappMessage = `Desejo concluir meu pedido:\n\n${message}\n\nTotal: R$${totalValue} \n\nFrete a calcular...\n\nPreencha as informações:\n\nNome:\nEndereço:\nForma de pagamento:\nPix, Debito, Credito`;
+    const whatsappMessage = `Desejo concluir meu pedido:\n\n${message}\n\nTotal: R$${totalValue} \nFrete a calcular...\n\nPreencha as informações:\n\nNome:\nEndereço:\nForma de pagamento:\nPix, Debito, Credito`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=5585991470709&text=${encodeURIComponent(
       whatsappMessage
     )}`;
