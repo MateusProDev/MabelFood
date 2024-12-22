@@ -76,7 +76,7 @@ const products = [
   },
   {
     id: 10,
-    name: "Pizza de Bacon"<
+    name: "Pizza de Bacon",
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Bacon em Cubos, Queijo, Orégano e Azeitona",
     price: 39.99,
