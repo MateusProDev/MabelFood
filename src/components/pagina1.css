@@ -23,7 +23,7 @@
 /* Estilo para o select de sabores */
 .pagina1-container .select-flavor,
 .pagina1-container .select-crust {
-  margin: 5px;
+  margin: 5px 0;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -98,7 +98,7 @@
 
 /* Estilo para o select de sabores */
 .pagina1-container .select-flavor {
-  margin: 5px 5px;
+  margin: 5px 0px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -148,4 +148,13 @@
     object-fit: cover; /* Para garantir que a imagem mantenha sua proporção */
     margin-right: 20px;
   }
+}
+
+/* Estilo para o seletor de tamanho */
+.pagina1-container .select-size {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
 }

@@ -88,6 +88,7 @@ const Pagina1 = ({ addToCart }) => {
   const [secondFlavor, setSecondFlavor] = useState(""); // Estado para o segundo sabor
   const [selectedCrust, setSelectedCrust] = useState(""); // Estado para a borda
   const [notification, setNotification] = useState(""); // Estado para exibir a notificação
+  const [selectedSize, setSelectedSize] = useState(""); // Estado para o tamanho
 
   const crustPrices = {
     "Borda Cheddar": 0.0,
@@ -95,13 +96,13 @@ const Pagina1 = ({ addToCart }) => {
     "Borda Chocolate": 3.0,
   };
 
-  const handleAddToCart = (product, secondFlavor, selectedCrust) => {
-    let productName = product.name;
+  const handleAddToCart = (product, secondFlavor, selectedCrust, selectedSize) => {
+    let productName = `${product.name} (${selectedSize})`; // Inclui o tamanho no nome
     let finalPrice = product.price;
 
-    // Ajustar o nome do produto com o segundo sabor, se aplicável
-    if (secondFlavor) {
-      productName = `${product.name} - Metade ${secondFlavor}`;
+    // Adicionar o segundo sabor somente se o tamanho for grande
+    if (selectedSize === "Grande" && secondFlavor) {
+      productName += ` - Metade ${secondFlavor}`;
     }
 
     // Adicionar o valor da borda ao preço final
@@ -140,27 +141,43 @@ const Pagina1 = ({ addToCart }) => {
               <div className="box-value">
                 <span>R${product.price.toFixed(2)}</span>
                 
-                {/* Campo para escolher o segundo sabor */}
+                {/* Campo para escolher o tamanho */}
                 <select
-                  value={secondFlavor}
-                  onChange={(e) => setSecondFlavor(e.target.value)}
-                  className="select-flavor" // Estilo do select
+                  value={selectedSize}
+                  onChange={(e) => {
+                    setSelectedSize(e.target.value);
+                    setSecondFlavor(""); // Reseta o segundo sabor ao mudar o tamanho
+                  }}
+                  className="select-size"
                 >
-                  <option value="">Selecione o segundo sabor (opcional)</option>
-                  {products.map((item) =>
-                    item.name !== product.name ? (
-                      <option key={item.id} value={item.name}>
-                        {item.name}
-                      </option>
-                    ) : null
-                  )}
+                  <option value="">Escolha o tamanho</option>
+                  <option value="Pequena">Pequena</option>
+                  <option value="Grande">Grande</option>
                 </select>
+
+                {/* Campo para escolher o segundo sabor, exibido apenas para tamanhos grandes */}
+                {selectedSize === "Grande" && (
+                  <select
+                    value={secondFlavor}
+                    onChange={(e) => setSecondFlavor(e.target.value)}
+                    className="select-flavor"
+                  >
+                    <option value="">Selecione o segundo sabor (opcional)</option>
+                    {products.map((item) =>
+                      item.name !== product.name ? (
+                        <option key={item.id} value={item.name}>
+                          {item.name}
+                        </option>
+                      ) : null
+                    )}
+                  </select>
+                )}
 
                 {/* Campo para escolher a borda */}
                 <select
                   value={selectedCrust}
                   onChange={(e) => setSelectedCrust(e.target.value)}
-                  className="select-crust" // Classe para estilizar
+                  className="select-crust"
                 >
                   <option value="">Escolha a borda (opcional)</option>
                   <option value="Borda Cheddar">Borda Cheddar - R$ 0,00</option>
@@ -172,7 +189,7 @@ const Pagina1 = ({ addToCart }) => {
                   className="btn"
                   type="button"
                   onClick={() =>
-                    handleAddToCart(product, secondFlavor, selectedCrust) // Passa o segundo sabor e a borda
+                    handleAddToCart(product, secondFlavor, selectedCrust, selectedSize)
                   }
                 >
                   Adicionar a sacola
