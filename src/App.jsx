@@ -50,7 +50,7 @@ const App = () => {
     </div>
   );
 
-  const Burguers = () => (
+  const Pasteis = () => (
     <div>
       <NavBar cart={cart} total={getTotal()} addToCart={addToCart} removeFromCart={removeFromCart} />
       <Category />
@@ -88,7 +88,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Pizzas" element={<Pizzas />} />
-          <Route path="/Burguers" element={<Burguers />} />
+          <Route path="/Pasteis" element={<Pasteis />} />
           <Route path="/Batatas" element={<Batatas />} />
           <Route path="/Bebidas" element={<Bebidas />} />
           <Route path="/MaisVendidos" element={<MaisVendidos />} />

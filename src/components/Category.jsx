@@ -12,9 +12,9 @@ const Category = () => {
           <img src="./img/SalamiPizza.png" alt="Pizzas" />
           <h3>Pizzas</h3>
         </div>
-        <div className="boxCate" onClick={() => navigate('/Burguers')}>
-          <img src="./img/Hamburger.png" alt="Hamburgues" />
-          <h3>Hamburgues</h3>
+        <div className="boxCate" onClick={() => navigate('/Pasteis')}>
+          <img src="./img/pastel.png" alt="Páteis" />
+          <h3>Páteis</h3>
         </div>
         <div className="boxCate" onClick={() => navigate('/Batatas')}>
           <img src="./img/batatas.png" alt="Batatas" />

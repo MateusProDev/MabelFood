@@ -10,7 +10,7 @@
   overflow-x: auto;
   white-space: nowrap;
   margin: 0; /* Remove margens */
-  padding: 20px 5px;
+  padding: 10px 5px;
   box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
@@ -20,9 +20,9 @@
 
 .boxCate {
   display: flex;
-  padding: 0 10px;
+  padding: 0px 10px;
   flex: 0 0 auto;
-  margin: 0 5px; /* Ajusta margens */
+  margin: 0 3px; /* Ajusta margens */
   text-align: center;
   align-items: center;
   border: 1px #dddddd solid;
