@@ -14,10 +14,11 @@
 }
 .boxPg1 p{
   margin: -0px;
+  padding: 2px 0;
 }
 .descri {
   margin: 0;
-  font-size: 12x;
+  font-size: 10px;
 }
 /* Estilo para o select de sabores */
 .pagina1-container .select-flavor,
