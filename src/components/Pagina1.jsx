@@ -40,7 +40,7 @@ const products = [
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Calabreza, Queijo, Orégano e Azeitona",
     price: 39.99,
-    imgSrc: "/img/carnedosol.jpg",
+    imgSrc: "/img/.jpg",
   },
   {
     id: 6,
@@ -48,7 +48,39 @@ const products = [
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, calabreza, Presunto, Queijo, Orégano e Azeitona",
     price: 39.99,
-    imgSrc: "/img/carnedosol.jpg",
+    imgSrc: "/img/.jpg",
+  },
+  {
+    id: 7,
+    name: "Pizza 3 Queijos",
+    content: "Entregamos para sua região",
+    description: "Massa fresca, Molho de tomate, Queijo, Cheddar, Catupiry, Orégano e Azeitona",
+    price: 39.99,
+    imgSrc: "/img/.jpg",
+  },
+  {
+    id: 8,
+    name: "Pizza de Mussarela",
+    content: "Entregamos para sua região",
+    description: "Massa fresca, Molho de tomate, Queijo mussarela, Orégano e Azeitona",
+    price: 39.99,
+    imgSrc: "/img/.jpg",
+  },
+  {
+    id: 9,
+    name: "Pizza Mista",
+    content: "Entregamos para sua região",
+    description: "Massa fresca, Molho de tomate, Queijo Presunto, Orégano e Azeitona",
+    price: 39.99,
+    imgSrc: "/img/.jpg",
+  },
+  {
+    id: 10,
+    name: "Pizza de Bacon"<
+    content: "Entregamos para sua região",
+    description: "Massa fresca, Molho de tomate, Bacon em Cubos, Queijo, Orégano e Azeitona",
+    price: 39.99,
+    imgSrc: "/img/.jpg",
   },
 ];
 
