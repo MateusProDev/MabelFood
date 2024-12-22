@@ -4,10 +4,10 @@ import "./pagina5.css";
 const products = [
   {
     id: 1,
-    name: "Pizza de Pepperoni",
+    name: "Pizza de Frango C/Catupiry",
     content: "Entregamos para sua região",
-    description: "Massa fresca, Molho de tomate, Pepperoni, Queijo e Orégano",
-    price: 34.99,
+    description: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
+    price: 39.99,
     imgSrc: "/img/pepperoni.jpg",
   },
   {
@@ -20,19 +20,19 @@ const products = [
   },
   {
     id: 3,
-    name: "Pizza Margherita",
+    name: "Pizza Marguerita",
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Queijo, Tomate, Orégano e Azeitona",
-    price: 12.99,
+    price: 39.99,
     imgSrc: "/img/marg.jpg",
   },
   {
     id: 4,
-    name: "Pizza Vegetariana",
+    name: "Pizza de Carne do sol",
     content: "Entregamos para sua região",
-    description: "Massa fresca, Molho de tomate, Legumes frescos, Queijo e Orégano",
-    price: 32.99,
-    imgSrc: "/img/vege.jpg",
+    description: "Massa fresca, Molho de tomate, Carne do sol, Queijo, Orégano e Azeitona",
+    price: 46.99,
+    imgSrc: "/img/carnedosol.jpg",
   },
 ];
 
