@@ -64,7 +64,6 @@ const MaisVendido = ({ addToCart }) => {
                     className="btn"
                     type="button"
                     onClick={() => {
-                      addToCart(product); // Adiciona ao carrinho
                       navigate("/MaisVendidos"); // Redireciona para a página 5
                     }}
                   >
