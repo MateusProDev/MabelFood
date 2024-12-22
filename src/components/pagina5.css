@@ -2,9 +2,7 @@
 .pagina5-container {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    padding: 5px;
 }
-
 .pagina5-seeHome {
     display: block;
     margin: -40px 0 5px 0;
@@ -12,18 +10,21 @@
 
 .pagina5-seeHome h1 {
     font-size: 28px;
+    padding: 0 10px;
     color: #333;
     margin: 50px 0 -10px 0;
 }
 
 .pagina5-seeHome p {
     font-size: 18px;
+    padding: 0 10px;
     color: #d1401c;
 }
 
 .pagina5-container .produto {
-    width: 100%;
+    width: 95%;
     background-color: white;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -75,7 +76,6 @@
     border-radius: 5px;
     border: 1px solid #ddd;
     width: 100%;
-    max-width: 300px;
 }
 
 .pagina5-container button.btn {
