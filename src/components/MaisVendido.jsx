@@ -23,7 +23,7 @@ const products = [
     id: 3,
     name: "Pizza Marguerita",
     content: "Entregamos para a sua região",
-    description: "Massa fresca, Molho de tomate, Queijo,<br />Tomate em rodelas, Orégano e Azeitona",
+    description: "Massa fresca, Molho de tomate, <br />Queijo, Tomate em rodelas, Orégano e Azeitona",
     price: 39.99,
     imgSrc: "/img/marg.jpg",
   },
