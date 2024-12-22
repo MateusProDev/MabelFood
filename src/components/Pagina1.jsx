@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./pagina5.css"; // Corrected the import statement for CSS
+import "./pagina1.css"; // Corrected the import statement for CSS
 
 const products = [
   {
