@@ -151,7 +151,7 @@ const Pagina1 = ({ addToCart }) => {
                   className="select-size"
                 >
                   <option value="">Escolha o tamanho</option>
-                  <option value="Pequena">Pequena</option>
+                  <option value="Média">Média</option>
                   <option value="Grande">Grande</option>
                 </select>
 
