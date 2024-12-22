@@ -14,7 +14,7 @@ const Category = () => {
         </div>
         <div className="boxCate" onClick={() => navigate('/Pasteis')}>
           <img src="./img/pastel.png" alt="Páteis" />
-          <h3>Páteis</h3>
+          <h3>Patéis</h3>
         </div>
         <div className="boxCate" onClick={() => navigate('/Batatas')}>
           <img src="./img/batatas.png" alt="Batatas" />
