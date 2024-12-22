@@ -34,6 +34,22 @@ const products = [
     price: 39.99,
     imgSrc: "/img/carnedosol.jpg",
   },
+  {
+    id: 5,
+    name: "Pizza de Calabreza",
+    content: "Entregamos para sua região",
+    description: "Massa fresca, Molho de tomate, Calabreza, Queijo, Orégano e Azeitona",
+    price: 39.99,
+    imgSrc: "/img/carnedosol.jpg",
+  },
+  {
+    id: 6,
+    name: "Pizza de Calamista",
+    content: "Entregamos para sua região",
+    description: "Massa fresca, Molho de tomate, calabreza, Presunto, Queijo, Orégano e Azeitona",
+    price: 39.99,
+    imgSrc: "/img/carnedosol.jpg",
+  },
 ];
 
 const Pagina1 = ({ addToCart }) => {
