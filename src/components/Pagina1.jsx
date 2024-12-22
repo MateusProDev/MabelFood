@@ -5,47 +5,61 @@ const products = [
   {
     id: 1,
     name: "Pizza de Frango C/Catupiry",
-    content: "Entregamos para sua região",
-    descrition: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
+    content: "Entregamos para toda sua região",
     price: 39.99,
     imgSrc: "/img/frangoca.jpg",
   },
   {
     id: 2,
     name: "Pizza Margherita",
-    content: "Entregamos para sua região",
-    descrition: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
+    content: "Entregamos para toda sua região",
     price: 39.99,
     imgSrc: "/img/marg.jpg",
   },
   {
     id: 3,
     name: "Pizza de Chocolate",
-    content: "Entregamos para sua região",
-    descrition: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
+    content: "Entregamos para toda sua região",
     price: 39.99,
     imgSrc: "/img/pizzadoce.jpg",
   },
   {
     id: 4,
-    name: "Pizza de Carne do sol",
-    content: "Entregamos para sua região",
-    descrition: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
-    price: 46.99,
+    name: "Pizza Vegetariana",
+    content: "Entregamos para toda sua região",
+    price: 39.99,
     imgSrc: "/img/vege.jpg",
   },
 ];
 
 const Pagina1 = ({ addToCart }) => {
   const [secondFlavor, setSecondFlavor] = useState(""); // Estado para o segundo sabor
+  const [selectedCrust, setSelectedCrust] = useState(""); // Estado para a borda
   const [notification, setNotification] = useState(""); // Estado para exibir a notificação
 
-  const handleAddToCart = (product, secondFlavor) => {
+  const crustPrices = {
+    "Borda Cheddar": 0.0,
+    "Borda Catupiry": 0.0,
+    "Borda Chocolate": 3.0,
+  };
+
+  const handleAddToCart = (product, secondFlavor, selectedCrust) => {
     let productName = product.name;
+    let finalPrice = product.price;
+
+    // Ajustar o nome do produto com o segundo sabor, se aplicável
     if (secondFlavor) {
-      productName = `${product.name} - Metade ${secondFlavor}`; // Corrigido para mostrar apenas o segundo sabor
+      productName = `${product.name} - Metade ${secondFlavor}`;
     }
-    addToCart({ ...product, name: productName });
+
+    // Adicionar o valor da borda ao preço final
+    if (selectedCrust) {
+      finalPrice += crustPrices[selectedCrust];
+      productName += ` - ${selectedCrust}`;
+    }
+
+    // Adiciona o item ao carrinho
+    addToCart({ ...product, name: productName, price: finalPrice });
 
     // Exibe a notificação
     setNotification("Item adicionado à sacola!");
@@ -69,10 +83,10 @@ const Pagina1 = ({ addToCart }) => {
             <div>
               <img src={product.imgSrc} alt={product.name} />
               <br />
-              <strong>{product.content}</strong> <br />
-              <p  className="descri">{product.descrition}</p>
+              <strong>{product.content}</strong>
               <div className="box-value">
                 <span>R${product.price.toFixed(2)}</span>
+                
                 {/* Campo para escolher o segundo sabor */}
                 <select
                   value={secondFlavor}
@@ -88,11 +102,24 @@ const Pagina1 = ({ addToCart }) => {
                     ) : null
                   )}
                 </select>
+
+                {/* Campo para escolher a borda */}
+                <select
+                  value={selectedCrust}
+                  onChange={(e) => setSelectedCrust(e.target.value)}
+                  className="select-crust" // Classe para estilizar
+                >
+                  <option value="">Escolha a borda (opcional)</option>
+                  <option value="Borda Cheddar">Borda Cheddar - R$ 0,00</option>
+                  <option value="Borda Catupiry">Borda Catupiry - R$ 0,00</option>
+                  <option value="Borda Chocolate">Borda Chocolate - R$ 3,00</option>
+                </select>
+
                 <button
                   className="btn"
                   type="button"
                   onClick={() =>
-                    handleAddToCart(product, secondFlavor) // Passa o segundo sabor para a função
+                    handleAddToCart(product, secondFlavor, selectedCrust) // Passa o segundo sabor e a borda
                   }
                 >
                   Adicionar a sacola

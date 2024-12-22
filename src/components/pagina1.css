@@ -15,6 +15,15 @@
 .descri {
   margin: 0;
 }
+/* Estilo para o select de sabores */
+.pagina1-container .select-flavor,
+.pagina1-container .select-crust {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%; /* Para ocupar toda a largura do contêiner */
+}
 
 .pagina1-container .produto {
   display: block; /* Torna os itens em blocos inline */
