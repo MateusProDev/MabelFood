@@ -5,7 +5,7 @@ const products = [
   {
     id: 1,
     name: "Pizza de Frango C/Catupiry",
-    content: "Entregamos para toda sua região",
+    content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
     price: 39.99,
     imgSrc: "/img/frangoca.jpg",
@@ -13,7 +13,7 @@ const products = [
   {
     id: 2,
     name: "Pizza Marguerita",
-    content: "Entregamos para toda sua região",
+    content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Queijo,Tomate em rodelas, Orégano e Azeitona",
     price: 39.99,
     imgSrc: "/img/marg.jpg",
@@ -21,7 +21,7 @@ const products = [
   {
     id: 3,
     name: "Pizza de Chocolate",
-    content: "Entregamos para toda sua região",
+    content: "Entregamos para sua região",
     description: "Massa fresca, Chocolate",
     price: 39.99,
     imgSrc: "/img/pizzadoce.jpg",
@@ -29,7 +29,7 @@ const products = [
   {
     id: 4,
     name: "Pizza de Carne do Sol",
-    content: "Entregamos para toda sua região",
+    content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Carne do sol, Queijo, Orégano e Azeitona",
     price: 39.99,
     imgSrc: "/img/carnedosol.jpg",
