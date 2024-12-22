@@ -53,31 +53,31 @@ const products = [
   },
   {
     id: 8,
-    name: "Pastel de 3 Queijos",
-    content: "Entregamos para sua região",
-    basePrice: 6.99,
-    imgSrc: "/img/3queijos.avif",
-  },
-  {
-    id: 9,
     name: "Pastel de Marguerita",
     content: "Entregamos para sua região",
     basePrice: 6.99,
-    imgSrc: "/img/marguerita.jpg",
+    imgSrc: "/img/modadacasa.jpg",
   },
   {
-    id: 10,
+    id: 9,
     name: "Pastel a Moda da Casa",
     content: "Entregamos para sua região",
     basePrice: 6.99,
     imgSrc: "/img/PastelMaster.jpg",
   },
   {
-    id: 11,
+    id: 10,
     name: "Pastel de Bacon",
     content: "Entregamos para sua região",
     basePrice: 6.99,
     imgSrc: "/img/bacon.png",
+  },
+  {
+    id: 11,
+    name: "Pastel de 3 Queijos",
+    content: "Entregamos para sua região",
+    basePrice: 6.99,
+    imgSrc: "/img/3queijos.jpg",
   },
 ];
 
