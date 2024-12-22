@@ -31,7 +31,7 @@ const products = [
     id: 4,
     name: "Pizza de Carne do Sol",
     content: "Entregamos para toda sua região",
-    description: "Massa fresca, Molho de tomate, <br />Carne do sol, Queijo, Orégano e Azeitona",
+    description: "Massa fresca, Molho de tomate, Carne<br />do sol, Queijo, Orégano e Azeitona",
     price: 39.99,
     imgSrc: "/img/carnedosol.jpg",
   },
