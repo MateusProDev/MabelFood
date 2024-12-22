@@ -88,6 +88,7 @@ const Pagina1 = ({ addToCart }) => {
               <img src={product.imgSrc} alt={product.name} />
               <br />
               <strong>{product.content}</strong>
+              <p>{product.description}</p>
               <div className="box-value">
                 <span>R${product.price.toFixed(2)}</span>
                 

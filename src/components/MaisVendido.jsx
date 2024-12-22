@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom';
 const products = [
   {
     id: 1,
-    name: "Pizza de Pepperoni",
-    content: "Entregamos para a sua região",
+    name: "Pizza de Frango C/Catupiry",
+    content: "Entregamos para toda sua região",
+    description: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
     price: 39.99,
-    imgSrc: "/img/pepperoni.jpg",
+    imgSrc: "/img/frangoca.jpg",
   },
   {
     id: 2,
@@ -19,17 +20,18 @@ const products = [
   },
   {
     id: 3,
-    name: "Pizza Margherita",
+    name: "Pizza Marguerita",
     content: "Entregamos para a sua região",
     price: 39.99,
     imgSrc: "/img/marg.jpg",
   },
   {
     id: 4,
-    name: "Pizza Vegetariana",
-    content: "Entregamos para a sua região",
+    name: "Pizza de Carne do Sol",
+    content: "Entregamos para toda sua região",
+    description: "Massa fresca, Molho de tomate, Carne do sol, Queijo, Orégano e Azeitona",
     price: 39.99,
-    imgSrc: "/img/vege.jpg",
+    imgSrc: "/img/carnedosol.jpg",
   },
 ];
 
@@ -55,6 +57,7 @@ const MaisVendido = ({ addToCart }) => {
                 <img src={product.imgSrc} alt={product.name} />
                 <br />
                 <strong>{product.content}</strong>
+              <p>{product.description}</p>
                 <div className="box-value">
                   <span>R${product.price.toFixed(2)}</span>
                   <button
