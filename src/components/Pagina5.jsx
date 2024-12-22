@@ -5,7 +5,7 @@ const products = [
   {
     id: 1,
     name: "Pizza de Pepperoni",
-    content: "Entrega Grátis",
+    content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Pepperoni, Queijo e Orégano",
     price: 34.99,
     imgSrc: "/img/pepperoni.jpg",
@@ -13,7 +13,7 @@ const products = [
   {
     id: 2,
     name: "Burguer Mac",
-    content: "Entrega Grátis",
+    content: "Entregamos para sua região",
     description: "Pão Brioche, Carne artesanal, Queijo, Presunto, Ovo, Alface e Tomate",
     price: 29.99,
     imgSrc: "/img/burguer.jpg",
@@ -21,7 +21,7 @@ const products = [
   {
     id: 3,
     name: "Pizza Margherita",
-    content: "Entrega Grátis",
+    content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Queijo, Tomate, Orégano e Azeitona",
     price: 12.99,
     imgSrc: "/img/marg.jpg",
@@ -29,7 +29,7 @@ const products = [
   {
     id: 4,
     name: "Pizza Vegetariana",
-    content: "Entrega Grátis",
+    content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Legumes frescos, Queijo e Orégano",
     price: 32.99,
     imgSrc: "/img/vege.jpg",

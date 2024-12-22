@@ -2,7 +2,7 @@
 .pagina5-container {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    padding: 20px;
+    padding: 5px;
 }
 
 .pagina5-seeHome {
@@ -51,7 +51,7 @@
 }
 
 .pagina5-container .boxPg1 p {
-    color: #555;
+    color: #e44d26;
     font-size: 14px;
 }
 
@@ -63,9 +63,9 @@
 
 .pagina5-container .box-value span {
     font-size: 22px;
-    color: #e44d26;
+    color: #555;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 0px;
 }
 
 .pagina5-container .select-flavor,
