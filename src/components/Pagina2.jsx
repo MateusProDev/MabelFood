@@ -4,31 +4,80 @@ import "./pagina1.css";
 const products = [
   {
     id: 1,
-    name: "Burguer Mac",
-    content: "Entrega Grátis",
-    price: 16.99,
-    imgSrc: "/img/BurguerPremium.jpg",
+    name: "Patel de Frango C/Catupiry",
+    content: "Entregamos para sua região",
+    price: 6.99,
+    imgSrc: "/img/PastelPremium.jpg",
   },
   {
     id: 2,
-    name: "Burguer Frango",
-    content: "Entrega Grátis",
-    price: 14.99,
-    imgSrc: "/img/BurguerFrango.jpg",
+    name: "Pastel de Calamista",
+    content: "Entregamos para sua região",
+    price: 6.99,
+    imgSrc: "/img/PastelFrango.jpg",
   },
   {
     id: 3,
-    name: "Burguer Premium",
-    content: "Entrega Grátis",
-    price: 22.99,
-    imgSrc: "/img/burguer.jpg",
+    name: "Pastel de Misto",
+    content: "Entregamos para sua região",
+    price: 6.99,
+    imgSrc: "/img/Pastel.jpg",
   },
   {
     id: 4,
-    name: "Burguer Master",
-    content: "Entrega Grátis",
-    price: 27.99,
-    imgSrc: "/img/BurguerMaster.jpg",
+    name: "Pastel de Portuguesa",
+    content: "Entregamos para sua região",
+    price: 6.99,
+    imgSrc: "/img/PastelMaster.jpg",
+  },
+  {
+    id: 5,
+    name: "Pastel de Calamista",
+    content: "Entregamos para sua região",
+    price: 6.99,
+    imgSrc: "/img/PastelMaster.jpg",
+  },
+  {
+    id: 6,
+    name: "Pastel de Chocolate",
+    content: "Entregamos para sua região",
+    price: 6.99,
+    imgSrc: "/img/PastelMaster.jpg",
+  },
+  {
+    id: 7,
+    name: "Pastel de Mussarela",
+    content: "Entregamos para sua região",
+    price: 6.99,
+    imgSrc: "/img/PastelMaster.jpg",
+  },
+  {
+    id: 8,
+    name: "Pastel de 3 Queijos",
+    content: "Entregamos para sua região",
+    price: 6.99,
+    imgSrc: "/img/PastelMaster.jpg",
+  },
+  {
+    id: 9,
+    name: "Pastel de Marguerita",
+    content: "Entregamos para sua região",
+    price: 6.99,
+    imgSrc: "/img/PastelMaster.jpg",
+  },
+  {
+    id: 10,
+    name: "Pastel a Moda da casa",
+    content: "Entregamos para sua região",
+    price: 6.99,
+    imgSrc: "/img/PastelMaster.jpg",
+  },
+  {
+    id: 11,
+    name: "Pastel de Bacon",
+    content: "Entregamos para sua região",
+    price: 6.99,
+    imgSrc: "/img/PastelMaster.jpg",
   },
 ];
 
@@ -36,7 +85,7 @@ const Pagina2 = ({ addToCart }) => {
   return (
     <div className="pagina1-container">
       <div className="seeHome">
-        <h1>HAMBURGUERS</h1>
+        <h1>Patéis</h1>
         <p>Conheça os sabores dos nossos Hambúrguers</p>
       </div>
       <div className="container"> {/* Adiciona a classe container aqui */}
