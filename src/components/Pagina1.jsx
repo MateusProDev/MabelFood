@@ -7,7 +7,7 @@ const products = [
     name: "Pizza de Frango C/Catupiry",
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
-    price: 39.99,
+    price: 27.99,
     imgSrc: "/img/frangoca.jpg",
   },
   {
@@ -15,7 +15,7 @@ const products = [
     name: "Pizza Marguerita",
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Queijo,Tomate em rodelas, Orégano e Azeitona",
-    price: 39.99,
+    price: 27.99,
     imgSrc: "/img/marg.jpg",
   },
   {
@@ -23,7 +23,7 @@ const products = [
     name: "Pizza de Chocolate",
     content: "Entregamos para sua região",
     description: "Massa fresca, Chocolate",
-    price: 39.99,
+    price: 27.99,
     imgSrc: "/img/pizzadoce.jpg",
   },
   {
@@ -39,7 +39,7 @@ const products = [
     name: "Pizza de Calabreza",
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Calabreza, Queijo, Orégano e Azeitona",
-    price: 39.99,
+    price: 27.99,
     imgSrc: "/img/.jpg",
   },
   {
@@ -47,7 +47,7 @@ const products = [
     name: "Pizza de Calamista",
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, calabreza, Presunto, Queijo, Orégano e Azeitona",
-    price: 39.99,
+    price: 27.99,
     imgSrc: "/img/.jpg",
   },
   {
@@ -55,7 +55,7 @@ const products = [
     name: "Pizza 3 Queijos",
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Queijo, Cheddar, Catupiry, Orégano e Azeitona",
-    price: 39.99,
+    price: 27.99,
     imgSrc: "/img/.jpg",
   },
   {
@@ -63,7 +63,7 @@ const products = [
     name: "Pizza de Mussarela",
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Queijo mussarela, Orégano e Azeitona",
-    price: 39.99,
+    price: 27.99,
     imgSrc: "/img/.jpg",
   },
   {
@@ -71,7 +71,7 @@ const products = [
     name: "Pizza Mista",
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Queijo Presunto, Orégano e Azeitona",
-    price: 39.99,
+    price: 27.99,
     imgSrc: "/img/.jpg",
   },
   {
@@ -79,16 +79,19 @@ const products = [
     name: "Pizza de Bacon",
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Bacon em Cubos, Queijo, Orégano e Azeitona",
-    price: 39.99,
+    price: 27.99,
     imgSrc: "/img/.jpg",
   },
 ];
 
 const Pagina1 = ({ addToCart }) => {
-  const [secondFlavor, setSecondFlavor] = useState(""); // Estado para o segundo sabor
-  const [selectedCrust, setSelectedCrust] = useState(""); // Estado para a borda
-  const [notification, setNotification] = useState(""); // Estado para exibir a notificação
-  const [selectedSize, setSelectedSize] = useState(""); // Estado para o tamanho
+  const [secondFlavor, setSecondFlavor] = useState("");
+  const [selectedCrust, setSelectedCrust] = useState("");
+  const [notification, setNotification] = useState("");
+  const [selectedSize, setSelectedSize] = useState("");
+  const [currentPrices, setCurrentPrices] = useState(
+    products.reduce((acc, product) => ({ ...acc, [product.id]: product.price }), {})
+  );
 
   const crustPrices = {
     "Borda Cheddar": 0.0,
@@ -96,30 +99,41 @@ const Pagina1 = ({ addToCart }) => {
     "Borda Chocolate": 3.0,
   };
 
-  const handleAddToCart = (product, secondFlavor, selectedCrust, selectedSize) => {
-    let productName = `${product.name} (${selectedSize})`; // Inclui o tamanho no nome
-    let finalPrice = product.price;
+  const handleSizeChange = (productId, size) => {
+    setSelectedSize(size);
 
-    // Adicionar o segundo sabor somente se o tamanho for grande
+    // Atualiza o preço com base no tamanho
+    const updatedPrices = { ...currentPrices };
+    if (size === "Média") {
+      updatedPrices[productId] = 21.99;
+    } else if (size === "Grande") {
+      updatedPrices[productId] = products.find((p) => p.id === productId).price;
+    }
+    setCurrentPrices(updatedPrices);
+
+    // Reseta o segundo sabor ao mudar o tamanho
+    setSecondFlavor("");
+  };
+
+  const handleAddToCart = (product, secondFlavor, selectedCrust, selectedSize) => {
+    let productName = `${product.name} (${selectedSize})`;
+    let finalPrice = currentPrices[product.id];
+
     if (selectedSize === "Grande" && secondFlavor) {
       productName += ` - Metade ${secondFlavor}`;
     }
 
-    // Adicionar o valor da borda ao preço final
     if (selectedCrust) {
       finalPrice += crustPrices[selectedCrust];
       productName += ` - ${selectedCrust}`;
     }
 
-    // Adiciona o item ao carrinho
     addToCart({ ...product, name: productName, price: finalPrice });
 
-    // Exibe a notificação
     setNotification("Item adicionado à sacola!");
 
-    // Fecha a notificação após 3 segundos
     setTimeout(() => {
-      setNotification(""); // Limpa a notificação após 3 segundos
+      setNotification("");
     }, 3000);
   };
 
@@ -139,15 +153,11 @@ const Pagina1 = ({ addToCart }) => {
               <strong>{product.content}</strong>
               <p>{product.description}</p>
               <div className="box-value">
-                <span>R${product.price.toFixed(2)}</span>
-                
-                {/* Campo para escolher o tamanho */}
+                <span>R${currentPrices[product.id].toFixed(2)}</span>
+
                 <select
                   value={selectedSize}
-                  onChange={(e) => {
-                    setSelectedSize(e.target.value);
-                    setSecondFlavor(""); // Reseta o segundo sabor ao mudar o tamanho
-                  }}
+                  onChange={(e) => handleSizeChange(product.id, e.target.value)}
                   className="select-size"
                 >
                   <option value="">Escolha o tamanho</option>
@@ -155,7 +165,6 @@ const Pagina1 = ({ addToCart }) => {
                   <option value="Grande">Grande</option>
                 </select>
 
-                {/* Campo para escolher o segundo sabor, exibido apenas para tamanhos grandes */}
                 {selectedSize === "Grande" && (
                   <select
                     value={secondFlavor}
@@ -173,7 +182,6 @@ const Pagina1 = ({ addToCart }) => {
                   </select>
                 )}
 
-                {/* Campo para escolher a borda */}
                 <select
                   value={selectedCrust}
                   onChange={(e) => setSelectedCrust(e.target.value)}
@@ -200,7 +208,6 @@ const Pagina1 = ({ addToCart }) => {
         ))}
       </div>
 
-      {/* Notificação */}
       {notification && <div className="notification">{notification}</div>}
     </div>
   );
