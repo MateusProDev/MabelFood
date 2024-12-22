@@ -7,14 +7,14 @@ const products = [
     name: "Batata Tradicional (300gm)",
     content: "Entregamos para sua região",
     price: 9.99,
-    imgSrc: "/img/dog2.jpg",
+    imgSrc: "/img/batatanormal.png",
   },
   {
     id: 2,
     name: "Batata Recheada (300gm)",
     content: "Entregamos para sua região",
     price: 14.99,
-    imgSrc: "/img/dog2.jpg",
+    imgSrc: "/img/batatarecheada.png",
   },
 ];
 
