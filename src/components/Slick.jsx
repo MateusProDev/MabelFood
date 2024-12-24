@@ -26,13 +26,10 @@ const Slick = () => {
     <Slider {...settings}>   {/* Passa as configurações definidas para o Slider */}
       {/* Definindo cada slide com uma classe específica para estilização */}
       <div className='img-slick'>
-        <img src="./img/banner1.png" alt="banner1 promoção de pizza" />   {/* Imagem do primeiro slide */}
+        <img src="./img/slider1.png" alt="banner1 promoção de pizza" />   {/* Imagem do primeiro slide */}
       </div>
       <div className='img-slick'>
-        <img src="./img/banner2.png" alt="banner12 promoção de hamburguer" />  {/* Imagem do segundo slide */}
-      </div>
-      <div className='img-slick'>
-        <img src="./img/banner3.png" alt="banner3 promoçao de bebidas" />  {/* Imagem do terceiro slide */}
+        <img src="./img/slider2.png" alt="banner12 promoção de hamburguer" />  {/* Imagem do segundo slide */}
       </div>
     </Slider>
   );
