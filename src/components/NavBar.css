@@ -291,7 +291,7 @@ body {
 
 .region-select {
   padding: 8px;
-  margin: 10px 0 0 -27px;
+  margin: 10px 0 0 0px;
   border: 1px solid #f29d38;
   border-radius: 5px;
   background-color: #f9f9f9;
