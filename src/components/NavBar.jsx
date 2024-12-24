@@ -11,10 +11,11 @@ const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
   const [deliveryFee, setDeliveryFee] = useState(0); // Taxa de entrega
 
   const regions = [
-    { name: "Centro", fee: 5.0 },
-    { name: "Zona Norte", fee: 7.0 },
-    { name: "Zona Sul", fee: 10.0 },
-    { name: "Outros", fee: 15.0 },
+    { name: "Abreulândia", fee: 3.0 },
+    { name: "Sabiaguaba", fee: 4.0 },
+    { name: "Lagoa Redonda", fee: 5.0 },
+    { name: "Mangabeira/Precabura", fee: 7.0 },
+    { name: "Mangabeira/Estrada do fio", fee: 9.0 },
   ];
 
   const handleMenuToggle = () => {
