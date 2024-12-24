@@ -1,4 +1,4 @@
-import React from "react";
+0mport React from "react";
 import { useNavigate } from "react-router-dom"; // Importa o hook de navegação
 import "./MaisVendido.css";
 
@@ -8,15 +8,15 @@ const products = [
     name: "Pizza de Frango C/Catupiry",
     content: "Entregamos para toda sua região",
     description: "Massa fresca, Molho de tomate,<br />Frango, Queijo, Orégano e Azeitona",
-    price: 39.99,
+    price: 27.99,
     imgSrc: "/img/pizzafrangoc.avif",
   },
   {
     id: 2,
-    name: "Burguer Mac",
+    name: "Pizza de Calabresa",
     content: "Entregamos para a sua região",
     description: "Pão Brioche, Carne artesanal, Queijo,<br />Prejunto, Ovos, Tomate e Alface",
-    price: 29.99,
+    price: 27.99,
     imgSrc: "/img/pizzacalabresa.avif",
   },
   {
@@ -24,7 +24,7 @@ const products = [
     name: "Pizza Marguerita",
     content: "Entregamos para a sua região",
     description: "Massa fresca, Molho de tomate, <br />Queijo, Tomate, Orégano e Azeitona",
-    price: 39.99,
+    price: 27.99,
     imgSrc: "/img/pizzamarguerita.avif",
   },
   {
@@ -32,7 +32,7 @@ const products = [
     name: "Pizza de Carne do Sol",
     content: "Entregamos para toda sua região",
     description: "Massa fresca, Molho de tomate, Carne<br />do sol, Queijo, Orégano e Azeitona",
-    price: 46.99,
+    price: 34.99,
     imgSrc: "/img/carnedosol.jpg",
   },
 ];
