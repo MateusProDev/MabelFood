@@ -126,8 +126,8 @@ const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
             </select>
           </label>
           <div className="car-box">
-          <p>
-            <strong>Taxa: </strong> R${deliveryFee.toFixed(2)}
+          <p className="car-taxa">
+            <strong >Taxa: </strong > R${deliveryFee.toFixed(2)}
           </p>
           <div className="car-total">
           <strong>Total:</strong>
