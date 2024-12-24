@@ -114,7 +114,7 @@ const Pagina2 = ({ addToCart }) => {
   return (
     <div className="pagina1-container">
       <div className="seeHome">
-        <h1>Pastéis</h1>
+        <h1>PASTÉIS</h1>
         <p>Conheça os sabores dos nossos pastéis</p>
       </div>
       <div className="container">

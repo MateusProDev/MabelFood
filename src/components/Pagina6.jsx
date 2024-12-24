@@ -114,7 +114,7 @@ const Pagina6 = ({ addToCart }) => {
   return (
     <div className="pagina1-container">
       <div className="seeHome">
-        <h1>Calzones</h1>
+        <h1>CALZONES</h1>
         <p>Conheça os sabores dos nossos Calzones</p>
       </div>
       <div className="container">
