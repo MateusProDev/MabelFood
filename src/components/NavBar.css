@@ -307,3 +307,6 @@ body {
 .total-carrinho strong{
   margin-left: -10px;
 }
+.car-box{
+  margin: 0 50px 0 0;
+}

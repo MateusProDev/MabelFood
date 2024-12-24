@@ -125,6 +125,7 @@ const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
               ))}
             </select>
           </label>
+          <div className="car-box">
           <p>
             <strong>Taxa: </strong> R${deliveryFee.toFixed(2)}
           </p>
@@ -132,6 +133,7 @@ const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
           <span id="total-carrinho">
             {" R$" + (Number(total) + deliveryFee).toFixed(2)}
           </span>
+          </div>
         </div>
         <button className="btnCar" type="button" onClick={handleFinalizePurchase}>
           Finalizar Compra
