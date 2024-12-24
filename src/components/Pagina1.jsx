@@ -8,7 +8,7 @@ const products = [
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Frango, Queijo, Orégano e Azeitona",
     price: 27.99,
-    imgSrc: "/img/frangoca.jpg",
+    imgSrc: "/img/pizzafrangoc.avif",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const products = [
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Queijo,Tomate em rodelas, Orégano e Azeitona",
     price: 27.99,
-    imgSrc: "/img/marg.jpg",
+    imgSrc: "/img/pizzamarguerita.avif",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const products = [
     content: "Entregamos para sua região",
     description: "Massa fresca, Chocolate",
     price: 27.99,
-    imgSrc: "/img/pizzadoce.jpg",
+    imgSrc: "/img/pizzachocolate.avif",
   },
   {
     id: 4,
@@ -32,15 +32,15 @@ const products = [
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Carne do sol, Queijo, Orégano e Azeitona",
     price: 46.99,
-    imgSrc: "/img/carnedosol.jpg",
+    imgSrc: "/img/pizzacarnedosol.avif",
   },
   {
     id: 5,
-    name: "Pizza de Calabreza",
+    name: "Pizza de Calabresa",
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Calabreza, Queijo, Orégano e Azeitona",
     price: 27.99,
-    imgSrc: "/img/.jpg",
+    imgSrc: "/img/pizzacalabresa.avif",
   },
   {
     id: 6,
@@ -56,7 +56,7 @@ const products = [
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Queijo, Cheddar, Catupiry, Orégano e Azeitona",
     price: 27.99,
-    imgSrc: "/img/.jpg",
+    imgSrc: "/img/pizza3queijos.avif",
   },
   {
     id: 8,
@@ -72,7 +72,7 @@ const products = [
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Queijo Presunto, Orégano e Azeitona",
     price: 27.99,
-    imgSrc: "/img/.jpg",
+    imgSrc: "/img/pizzamista.avif",
   },
   {
     id: 10,
@@ -80,7 +80,7 @@ const products = [
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Bacon em Cubos, Queijo, Orégano e Azeitona",
     price: 27.99,
-    imgSrc: "/img/.jpg",
+    imgSrc: "/img/pizza3queijos.avif",
   },
 ];
 

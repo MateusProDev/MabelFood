@@ -9,6 +9,7 @@ import Pagina2 from "./components/Pagina2";
 import Pagina3 from "./components/Pagina3";
 import Pagina4 from "./components/Pagina4";
 import Pagina5 from "./components/Pagina5";
+import Pagina6 from "./components/Pagina6";
 
 // Componente principal da aplicação
 const App = () => {
@@ -57,6 +58,13 @@ const App = () => {
       <Pagina2 addToCart={addToCart} />
     </div>
   );
+  const Calzones = () => (
+    <div>
+      <NavBar cart={cart} total={getTotal()} addToCart={addToCart} removeFromCart={removeFromCart} />
+      <Category />
+      <Pagina6 addToCart={addToCart} />
+    </div>
+  );
 
   const Batatas = () => (
     <div>
@@ -89,6 +97,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/Pizzas" element={<Pizzas />} />
           <Route path="/Pasteis" element={<Pasteis />} />
+          <Route path="/Calzones" element={<Calzones />} />
           <Route path="/Batatas" element={<Batatas />} />
           <Route path="/Bebidas" element={<Bebidas />} />
           <Route path="/MaisVendidos" element={<MaisVendidos />} />

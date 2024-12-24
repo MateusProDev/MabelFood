@@ -259,8 +259,10 @@ body {
 }
 
 .btnCar {
-  padding: 7px 10px;
+  width: 150px;
+  padding: 10px 10px;
   border: none;
+  font-size: 16px;
   background-color: #e44d26;
   color: #f9f9f9;
   border-radius: 5px;
@@ -285,4 +287,23 @@ body {
   padding: 5px 10px;
   font-size: 14px;
   font-weight: bold;
+}
+
+.region-select {
+  padding: 8px;
+  margin: 10px 0 0 -5px;
+  border: 1px solid #f29d38;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+}
+.total-carrinho {
+  width: 200px;
+}
+.total-carrinho p{
+  margin: 10px 0 10px 0;
+}
+.total-carrinho strong{
+  margin-left: -20px;
 }
