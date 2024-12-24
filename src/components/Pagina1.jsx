@@ -32,7 +32,7 @@ const products = [
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Carne do sol, Queijo, Orégano e Azeitona",
     price: 46.99,
-    imgSrc: "/img/pizzacarnedosol.avif",
+    imgSrc: "/img/carnedosol.jpg",
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const products = [
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, calabreza, Presunto, Queijo, Orégano e Azeitona",
     price: 27.99,
-    imgSrc: "/img/.jpg",
+    imgSrc: "/img/pizzacalamista.png",
   },
   {
     id: 7,
@@ -64,7 +64,7 @@ const products = [
     content: "Entregamos para sua região",
     description: "Massa fresca, Molho de tomate, Queijo mussarela, Orégano e Azeitona",
     price: 27.99,
-    imgSrc: "/img/.jpg",
+    imgSrc: "/img/pizzamussarela.avif",
   },
   {
     id: 9,

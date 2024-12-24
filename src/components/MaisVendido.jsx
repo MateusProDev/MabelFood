@@ -9,7 +9,7 @@ const products = [
     content: "Entregamos para toda sua região",
     description: "Massa fresca, Molho de tomate,<br />Frango, Queijo, Orégano e Azeitona",
     price: 39.99,
-    imgSrc: "/img/frangoca.jpg",
+    imgSrc: "/img/pizzafrango.avif",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const products = [
     content: "Entregamos para a sua região",
     description: "Pão Brioche, Carne artesanal, Queijo,<br />Prejunto, Ovos, Tomate e Alface",
     price: 29.99,
-    imgSrc: "/img/burguer.jpg",
+    imgSrc: "/img/pizzacalabresa.avif",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const products = [
     content: "Entregamos para a sua região",
     description: "Massa fresca, Molho de tomate, <br />Queijo, Tomate, Orégano e Azeitona",
     price: 39.99,
-    imgSrc: "/img/marg.jpg",
+    imgSrc: "/img/pizzamarguerita.avif",
   },
   {
     id: 4,
