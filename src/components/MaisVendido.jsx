@@ -1,4 +1,4 @@
-0mport React from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom"; // Importa o hook de navegação
 import "./MaisVendido.css";
 
