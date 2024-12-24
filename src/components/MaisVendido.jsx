@@ -9,7 +9,7 @@ const products = [
     content: "Entregamos para toda sua região",
     description: "Massa fresca, Molho de tomate,<br />Frango, Queijo, Orégano e Azeitona",
     price: 39.99,
-    imgSrc: "/img/pizzafrango.avif",
+    imgSrc: "/img/pizzafrangoc.avif",
   },
   {
     id: 2,
