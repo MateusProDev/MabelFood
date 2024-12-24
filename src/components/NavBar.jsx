@@ -129,10 +129,12 @@ const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
           <p>
             <strong>Taxa: </strong> R${deliveryFee.toFixed(2)}
           </p>
+          <div className="car-total">
           <strong>Total:</strong>
           <span id="total-carrinho">
             {" R$" + (Number(total) + deliveryFee).toFixed(2)}
           </span>
+          </div>
           </div>
         </div>
         <button className="btnCar" type="button" onClick={handleFinalizePurchase}>
