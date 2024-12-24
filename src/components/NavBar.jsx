@@ -97,7 +97,7 @@ const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
             <p className="priceCar">Sua sacola está vazia</p>
           ) : (
             cart.map((item, index) => (
-              <div key={index}>
+              <div className="car-itens" key={index}>
                 <span className="priceCar">
                   {item.name} - R${item.price.toFixed(2)}
                 </span>

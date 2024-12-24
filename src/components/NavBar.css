@@ -263,7 +263,7 @@ body {
   padding: 10px 10px;
   border: none;
   font-size: 16px;
-  background-color: #48d614;
+  background-color: #25D366;
   color: #f9f9f9;
   border-radius: 5px;
 }
@@ -299,14 +299,17 @@ body {
   color: #333;
 }
 .total-carrinho {
-  width: 200px;
+  width: 220px;
 }
 .total-carrinho p{
   margin: 10px 0 10px 0;
 }
 .total-carrinho strong{
-  margin-left: 0;
+  margin-left: -25px;
 }
 .car-box{
   margin: 0 50px 0 0;
+}
+.car-itens{
+  padding-right: 15px;
 }
