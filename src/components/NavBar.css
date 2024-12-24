@@ -291,7 +291,7 @@ body {
 
 .region-select {
   padding: 8px;
-  margin: 10px 0 0 -5px;
+  margin: 10px 0 0 -27px;
   border: 1px solid #f29d38;
   border-radius: 5px;
   background-color: #f9f9f9;
@@ -302,13 +302,16 @@ body {
   width: 220px;
 }
 .total-carrinho p{
-  margin: 10px 0 10px 0;
+  margin: 10px 0 0px 0;
 }
 .total-carrinho strong{
   margin-left: -25px;
 }
 .car-box{
   margin: 0 50px 0 0;
+}
+.car-tl{
+  margin: 0 -10px 0 0;
 }
 .car-itens{
   padding-right: 15px;

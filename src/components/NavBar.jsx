@@ -117,7 +117,7 @@ const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
               onChange={handleRegionChange}
               className="region-select"
             >
-              <option value="">Selecione...</option>
+              <option className="car-option" value="">Selecione...</option>
               {regions.map((region) => (
                 <option key={region.name} value={region.name}>
                   {region.name} (+R${region.fee.toFixed(2)})
