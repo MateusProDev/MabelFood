@@ -311,7 +311,8 @@ body {
   margin: 0 50px 0 0;
 }
 .car-tl{
-  margin: 0 -10px 0 0;
+  margin: 0 15px 0 0;
+  font-size: 20px;
 }
 .car-itens{
   padding-right: 15px;
