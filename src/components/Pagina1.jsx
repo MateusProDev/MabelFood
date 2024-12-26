@@ -102,24 +102,27 @@ const Pagina1 = ({ addToCart }) => {
   const handleSizeChange = (productId, size) => {
     setSelectedSize(size);
 
-    // Atualiza o preço com base no tamanho
     const updatedPrices = { ...currentPrices };
+
     if (size === "Média") {
-      updatedPrices[productId] = 21.99;
+      updatedPrices[productId] = productId === 4 ? 29.99 : 21.99; // Carne do Sol tem preço especial
     } else if (size === "Grande") {
       updatedPrices[productId] = products.find((p) => p.id === productId).price;
     }
     setCurrentPrices(updatedPrices);
 
-    // Reseta o segundo sabor ao mudar o tamanho
-    setSecondFlavor("");
+    // Reseta o segundo sabor se o produto for Carne do Sol
+    if (productId === 4) {
+      setSecondFlavor("");
+    }
   };
 
   const handleAddToCart = (product, secondFlavor, selectedCrust, selectedSize) => {
     let productName = `${product.name} (${selectedSize})`;
     let finalPrice = currentPrices[product.id];
 
-    if (selectedSize === "Grande" && secondFlavor) {
+    if (selectedSize === "Grande" && product.id !== 4 && secondFlavor) {
+      // Sem segunda metade para Carne do Sol
       productName += ` - Metade ${secondFlavor}`;
     }
 
@@ -165,7 +168,7 @@ const Pagina1 = ({ addToCart }) => {
                   <option value="Grande">Grande</option>
                 </select>
 
-                {selectedSize === "Grande" && (
+                {selectedSize === "Grande" && product.id !== 4 && (
                   <select
                     value={secondFlavor}
                     onChange={(e) => setSecondFlavor(e.target.value)}
