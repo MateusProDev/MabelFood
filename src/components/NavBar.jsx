@@ -12,10 +12,17 @@ const NavBar = ({ cart, total, addToCart, removeFromCart }) => {
 
   const regions = [
     { name: "Abreulândia", fee: 3.0 },
-    { name: "Sabiaguaba", fee: 4.0 },
-    { name: "Lagoa Redonda", fee: 5.0 },
-    { name: "Mangabeira/Precabura", fee: 7.0 },
-    { name: "Mangabeira/Estrada do fio", fee: 9.0 },
+    { name: "Sabiaguaba", fee: 6.0 },
+    { name: "Lagoa Redonda", fee: 7.0 },
+    { name: "Mangabeira", fee: 6.0 },
+    { name: "Estrada do fio", fee: 12.0 },
+    { name: "Precabura", fee: 5.0 },
+    { name: "Cararu/Quadras", fee: 4.0 },
+    { name: "Guaribas", fee: 12.0 },
+    { name: "Guaribas Shopping Eusébio", fee: 15.0 },
+    { name: "Avenida Recreio", fee: 15.0 },
+    { name: "PDD", fee: 15.0 },
+    { name: "Alfaville", fee: 7.0 },
   ];
 
   const handleMenuToggle = () => {
